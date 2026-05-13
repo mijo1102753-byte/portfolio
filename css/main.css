@@ -456,7 +456,7 @@ body {
 .sec3_bg {
   position: absolute;
   inset: 0;
-  background: url("../img/sec3_bg.png") no-repeat center / cover;
+  background: url("../img/sec3_BG.png") no-repeat center / cover;
   z-index: 1;
 }
 
@@ -675,7 +675,7 @@ body {
 .sec4_bg {
   position: absolute;
   inset: 0;
-  background: url("../img/sec4_bg.png") no-repeat center / cover;
+  background: url("../img/sec4_BG.png") no-repeat center / cover;
   z-index: 1;
   pointer-events: none;
 }
