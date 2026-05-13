@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>profile</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/Fivicon.png" />
+
+    <link rel="stylesheet" href="sec3.css" />
+  </head>
+  <body>
+    <!-- ===================== header ===================== -->
+    <!-- header -->
+    <header id="subHeader">
+      <div class="sub_header_inner">
+        <h1 class="sub_logo">
+          <a href="../index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </h1>
+
+        <nav class="sub_nav">
+          <span class="sub_nav_circle"></span>
+
+          <a href="../index.html?target=sec3" data-target="sec3" data-name="PROFILE">빛</a>
+          <a href="../index.html?target=sec4" data-target="sec4" data-name="ARTWORK">충돌</a>
+          <a href="../index.html?target=sec5" data-target="sec5" data-name="VIDEO">그림자</a>
+          <a href="../index.html?target=sec6" data-target="sec6" data-name="WEB">인식</a>
+          <a href="../index.html?target=sec7" data-target="sec7" data-name="CONTACT">균형</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===================== section3 ===================== -->
+    <section id="sec3">
+      <div class="sec3_bg"></div>
+
+      <div class="sec3_inner">
+        <div class="sec3_box_img">
+          <img src="img/sec3box_BG.png" alt="" />
+        </div>
+        <!-- 프로필 상단 -->
+        <div class="profile_top">
+          <div class="profile_img">
+            <img src="img/me.png" alt="profile" />
+          </div>
+
+          <div class="profile_info">
+            <h2>PROFILE</h2>
+            <div class="profile_name">
+              <p class="eng">KIM MIJO</p>
+              <p class="kor">김미조</p>
+              <span class="birth">2000.11.02</span>
+            </div>
+
+            <div class="desc">
+              <p>“단순한 디자인을 넘어 경험을 설계하고,</p>
+              <p>&nbsp; 브랜드와 사용자의 흐름을 연결하는 웹디자이너 김미조입니다.”</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 4컬럼 -->
+        <div class="profile_bottom">
+          <div class="col">
+            <h3>EDUCATION</h3>
+            <p>한국체육대학교 생활무용학과</p>
+            <p class="date">2019.03 - 2022.02</p>
+            <p>한국체육대학교 사회체육대학원</p>
+            <p class="date">2022.03 - 2025.08</p>
+            <p class="academy_text">
+              MBC컴퓨터아카데미 수료<br />
+              -생성형 AI를 활용한 영상 <br />
+              &nbsp; 웹퍼블리셔&프론트엔드(React) <br />
+              &nbsp; 개발자 양성
+            </p>
+            <p class="date">2025.12.08~2026.05.27</p>
+          </div>
+
+          <div class="col">
+            <h3>CERTIFICATE</h3>
+            <p>매트 필라테스 지도자 자격증</p>
+            <p class="date">2019.05.19</p>
+            <p>기구 필라테스 지도자 자격증</p>
+            <p class="date">2020.03.27</p>
+          </div>
+
+          <div class="col">
+            <h3>SKILL</h3>
+            <div class="skill_icons">
+              <img src="img/potoshop_LOGO.png" />
+              <img src="img/illustration_LOGO.png" />
+              <img src="img/premierepro_LOGO.png" />
+              <img src="img/aftereffect_LOGO.png" />
+              <img src="img/vscode_LOGO.png" />
+              <img src="img/figma_LOGO.png" />
+
+              <img src="img/html.png" class="html_logo" />
+              <img src="img/css.png" class="css_logo" />
+              <img src="img/js.png" />
+              <img src="img/react.png" />
+            </div>
+          </div>
+
+          <div class="col">
+            <h3>PERSONALITY</h3>
+            <p>#책임감</p>
+            <p>#성실함</p>
+            <p>#끈기</p>
+            <p>#트렌디함</p>
+            <p>#기획력</p>
+            <p>#창의적인시선</p>
+            <p>#브랜드이해도</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- copyright -->
+    <footer class="copyright">
+      <p>copyright © 2026 mijokim. All right reserved.</p>
+    </footer>
+
+    <!--  =================================================== -->
+    <!--  ===================== script  ===================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+
+    <script>
+      // ===================== header circle =====================
+      const nav = document.querySelector(".sub_nav");
+      const navLinks = document.querySelectorAll(".sub_nav a");
+      const navCircle = document.querySelector(".sub_nav_circle");
+
+      function moveSubCircle(link) {
+        const navRect = nav.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        const x = linkRect.left - navRect.left + linkRect.width / 2;
+
+        navCircle.style.left = `${x}px`;
+      }
+
+      window.addEventListener("load", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec3"]');
+        moveSubCircle(firstLink);
+      });
+
+      window.addEventListener("resize", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec3"]');
+        moveSubCircle(firstLink);
+      });
+
+      // 메인페이지 특정 섹션으로 이동
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const target = link.dataset.target;
+
+          location.href = `../index.html?target=${target}`;
+        });
+      });
+
+      /// ===================== real typing + cursor =====================
+
+      const descLines = document.querySelectorAll(".profile_info .desc p");
+
+      const textLines = [];
+
+      descLines.forEach((line) => {
+        textLines.push(line.innerHTML.replace(/&nbsp;/g, " "));
+
+        line.innerHTML = "";
+      });
+
+      let typingPlayed = false;
+
+      function startTyping() {
+        if (typingPlayed) return;
+
+        typingPlayed = true;
+
+        let lineIndex = 0;
+
+        // 커서 생성
+        const cursor = document.createElement("span");
+        cursor.classList.add("typing_cursor");
+
+        // 커서 깜빡임
+        gsap.to(cursor, {
+          opacity: 0,
+          repeat: -1,
+          yoyo: true,
+          duration: 0.5,
+          ease: "power1.inOut",
+        });
+
+        function typeLine() {
+          if (lineIndex >= descLines.length) return;
+
+          const line = descLines[lineIndex];
+
+          const text = textLines[lineIndex];
+
+          let charIndex = 0;
+
+          line.appendChild(cursor);
+
+          function typing() {
+            if (charIndex < text.length) {
+              cursor.insertAdjacentText("beforebegin", text[charIndex]);
+
+              charIndex++;
+
+              gsap.delayedCall(0.05, typing);
+            } else {
+              lineIndex++;
+
+              gsap.delayedCall(0.4, typeLine);
+            }
+          }
+
+          typing();
+        }
+
+        typeLine();
+      }
+
+      // 페이지 시작 애니메이션
+      window.addEventListener("load", () => {
+        gsap.from(".profile_bottom", {
+          y: 80,
+          opacity: 0,
+          duration: 1,
+          ease: "power3.out",
+        });
+
+        gsap.delayedCall(0.5, () => {
+          startTyping();
+        });
+      });
+
+      // ===================== sub page circle cursor =====================
+      const subCursor = document.createElement("div");
+      subCursor.className = "sub_cursor";
+      document.body.appendChild(subCursor);
+
+      let subLastTrailTime = 0;
+
+      document.addEventListener("mousemove", function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        subCursor.style.left = x + "px";
+        subCursor.style.top = y + "px";
+
+        const now = Date.now();
+
+        if (now - subLastTrailTime > 55) {
+          const trail = document.createElement("div");
+          trail.className = "sub_cursor_trail";
+          trail.style.left = x + "px";
+          trail.style.top = y + "px";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 1000);
+
+          subLastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", function () {
+        subCursor.classList.add("click");
+      });
+
+      document.addEventListener("mouseup", function () {
+        subCursor.classList.remove("click");
+      });
+    </script>
+  </body>
+</html>

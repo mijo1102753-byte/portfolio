@@ -1,0 +1,140 @@
+/* 오프닝 영역 */
+.opening {
+  padding: 100px 0;
+  text-align: center;
+  color: #bc9a51;
+}
+.opening h2 {
+  margin-bottom: 5px;
+}
+.opening h2 span.grand {
+  display: inline-block;
+  width: 395px;
+  height: 46px;
+  background-position: 0 -123px;
+}
+.opening .date {
+  display: inline-block;
+  font-size: 30px;
+  margin-bottom: 2px;
+}
+.opening .desc {
+  font-size: 35px;
+  font-weight: 300;
+  background: url(../img/bar.png) no-repeat bottom center;
+  background-size: 100%;
+  margin-bottom: 40px;
+  padding-bottom: 10px;
+}
+.open_box {
+  display: flex;
+  /* gap: 140px; */
+  justify-content: space-between;
+  padding: 0 3%;
+}
+
+.open_box > div {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 25%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  /* position: relative; */
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+.open_box > div.bounce {
+  transform: scale(1);
+}
+.open_box > div:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.open_box > div:nth-child(3) {
+  transition-delay: 0.4s;
+}
+.open_box > div h3 {
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 300;
+  padding: 10px 20px;
+  background-color: #38116a;
+  border: 1px solid #6e24cf;
+  /* position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%); */ /* position 으로 하면 미디어 쿼리에서 엄천 쪼개야함*/
+  margin-top: -25px;
+}
+.open_box > div p {
+  font-size: 23px;
+  font-weight: 300;
+  padding: 6% 0 10% 0;
+}
+.open_box > div p em {
+  display: block;
+}
+.open_box > div p strong {
+  display: block;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+}
+@media (max-width: 960px) {
+  .opening {
+    padding: 50px 0;
+  }
+  .opening h2 span.grand {
+    width: 302px;
+    height: 35px;
+    background-position: 0 -168px;
+  }
+  .open_box > div {
+    width: 30%;
+  }
+  .opening .date {
+    font-size: 25px;
+  }
+  .opening .desc {
+    font-size: 25px;
+  }
+  .open_box > div p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .opening {
+    padding: 25px 0;
+  }
+  .opening h2 span.grand {
+    width: 183px;
+    height: 21px;
+    background-position: 0 -203px;
+  }
+  #opening .row {
+    padding: 0 24px;
+  }
+  .open_box {
+    display: none;
+  }
+  .opening .desc {
+    margin-bottom: 0;
+    font-size: 22px;
+    word-break: keep-all;
+    line-height: 1.1;
+  }
+  .opening .date {
+    font-size: 22px;
+  }
+}
+@media (max-width: 600px) {
+}
+@media (max-width: 480px) {
+}
+@media (max-width: 320px) {
+}

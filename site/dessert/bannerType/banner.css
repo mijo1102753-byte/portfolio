@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "NexonLv1Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff")
+    format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NexonLv1Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NexonLv1Gothic";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GMarketSans";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+
+/* common */
+.container {
+  width: 1160px;
+  margin: 0 auto;
+}
+.section {
+  padding: 120px 0;
+}
+.section > h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.section > p {
+  font-size: 22px;
+  font-weight: 300;
+  margin-bottom: 70px;
+  text-align: center;
+  color: #777;
+}
+
+/* bannerType */
+.banner_inner {
+  background: url(img/banner_img.jpg) no-repeat center / cover;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+.banner_inner .title {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.banner_inner .desc {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+.banner_inner .desc a {
+  display: block;
+  color: #fff;
+}
+.banner_inner .small {
+  text-decoration: underline;
+}

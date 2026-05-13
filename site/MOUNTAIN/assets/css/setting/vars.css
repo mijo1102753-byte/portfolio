@@ -1,0 +1,47 @@
+:root {
+  --mainEng-font: "Montserrat";
+  --mainKor-font: "Pretendard";
+  --mainNum-font: "GMarketSans";
+
+  --mainBg-color: #c9d0d9;
+  --subBg100: #acb1b8;
+  --subBg200: #acb8c8;
+  --subBg300: #96a3b3;
+  --subBg400: #7b92ab;
+  --subBg500: #85a0c1;
+
+  --white: #fff;
+  --white100: #ffffff96;
+  --black: #000;
+  --black100: #2b2b2b;
+  --black200: #434343;
+  --black300: #686868;
+  --black400: #e0e0e0;
+
+  /* 기본 폰트 설정 */
+  font-family: var(--mainEng-font), var(--mainKor-font);
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 아이폰 가로 모드에서 글씨 확대 금지 */
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+  :root {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+body {
+  color: var(--black100);
+  background-color: var(--mainBg-color);
+}

@@ -1,0 +1,26 @@
+/* bannerType */
+.banner_inner {
+  background: url(../img/banner_img.jpg) no-repeat center / cover;
+  padding: 120px 0;
+  text-align: center;
+  color: #fff;
+}
+.banner_inner .title {
+  font-size: 50px;
+  line-height: 1;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+.banner_inner .desc {
+  font-size: 24px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 70px;
+}
+.banner_inner .desc a {
+  display: block;
+  color: #fff;
+}
+.banner_inner .small {
+  text-decoration: underline;
+}

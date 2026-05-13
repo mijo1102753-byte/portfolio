@@ -1,0 +1,121 @@
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  backdrop-filter: blur(15px);
+}
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(123, 123, 123, 0.1);
+}
+.header_logo {
+  font-size: 0.9rem;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1;
+}
+.header_logo em {
+  font-size: 12px;
+  display: block;
+}
+.header_nav {
+}
+.header_nav ul {
+}
+.header_nav ul li {
+  display: inline-block;
+}
+.header_nav ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 14px;
+  position: relative;
+}
+.header_nav ul li a::after {
+  content: "";
+  width: calc(100% - 28px);
+  height: 1px;
+  background-color: var(--black);
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  transform: scale(0);
+  transition: transform 0.3s;
+}
+.header_nav ul li a:hover::after {
+  transform: scale(1);
+}
+
+.header_nav_mobile {
+  width: 40px;
+  height: 40px;
+  display: none;
+  cursor: pointer;
+}
+.header_nav_mobile span {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: var(--black);
+  margin-top: 19px;
+  position: relative;
+}
+.header_nav_mobile span::before {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: var(--black);
+  position: absolute;
+  right: 0;
+  top: 6px;
+  transition: width 0.3s;
+}
+
+.header_nav_mobile span::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background-color: var(--black);
+  position: absolute;
+  left: 0;
+  bottom: 6px;
+  transition: width 0.3s;
+}
+
+@media (max-width: 800px) {
+  .header_nav_mobile {
+    display: block;
+  }
+  .header_nav {
+    display: none;
+  }
+  .header_nav.show {
+    display: block;
+  }
+  .header_nav.show ul {
+    position: absolute;
+    right: 0;
+    top: 68px;
+    background-color: rgba(123, 123, 123, 0.1);
+    padding: 20px 5px 20px 20px;
+  }
+  .header_nav.show ul li {
+    display: block;
+    text-align: right;
+  }
+  .show ul li a {
+    display: inline-block;
+    padding: 10px;
+  }
+  .header_nav.show + .header_nav_mobile span::before {
+    width: 20px;
+  }
+  .header_nav.show + .header_nav_mobile span::after {
+    width: 20px;
+  }
+}

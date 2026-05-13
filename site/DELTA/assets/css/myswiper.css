@@ -1,0 +1,7 @@
+.hero .swiper-button-next,
+.hero .swiper-button-prev {
+  color: #ba0707;
+}
+.hero .swiper-pagination-bullet {
+  background-color: #ba0707;
+}

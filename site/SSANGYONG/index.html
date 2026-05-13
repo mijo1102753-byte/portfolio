@@ -1,0 +1,883 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SSANGYONG</title>
+
+    <!-- 1. reset -->
+    <link rel="stylesheet" href="css/reset.css" />
+
+    <!-- 2. font -->
+    <link rel="stylesheet" href="css/font.css" />
+
+    <!-- 3. swiper (라이브러리) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- 4. 전체 스타일 -->
+    <link rel="stylesheet" href="css/ssangyong_style.css" />
+
+    <!-- 5. swiper 커스텀-->
+    <link rel="stylesheet" href="css/swiper.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.ico" />
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header id="header">
+      <div class="header_inner">
+        <h1 class="logo">
+          <a href="#"><img src="img/header_LOGO.png" alt="" /></a>
+        </h1>
+
+        <nav class="nav">
+          <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">사업분야</a></li>
+            <li><a href="#">혁신기술</a></li>
+            <li><a href="#">홍보센터</a></li>
+            <li><a href="#">재무정보</a></li>
+            <li><a href="#">인재채용</a></li>
+
+            <li class="nav_search">
+              <input type="text" placeholder="검색어를 입력하세요" />
+            </li>
+          </ul>
+        </nav>
+
+        <div class="util">
+          <span><img src="img/earch2.png" alt="" /></span>
+          <span><img src="img/Search2.png" alt="" /></span>
+
+          <button class="menu_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- HERO -->
+    <section id="hero">
+      <!-- 로고 따로 -->
+      <img src="img/LOGO1.png" class="hero_logo" alt="" />
+      <img src="img/hero_bg33.png" class="hero_bg" />
+      <!-- 텍스트 따로 -->
+      <div class="hero_inner">
+        <h2 class="hero_title">SSANGYONG ENGINEERING</h2>
+        <p class="hero_desc">쌍용건설은 전 세계를 무대로, 건설 그 이상의 가치를 실현해가고 있습니다</p>
+      </div>
+    </section>
+
+    <!-- SECTION1 -->
+    <section class="sec1">
+      <div>
+        <p class="sub">&#x2022;OUR BUSINESS</p>
+        <h2 class="main_title">Design and Build</h2>
+
+        <div class="business_wrap">
+          <div class="business_item" data-title="Architecture">
+            <img
+              src="img/sec_business_bg1_black.png"
+              data-gray="img/sec_business_bg1_black.png"
+              data-color="img/sec_business_bg1.jpg"
+            />
+            <div class="info">
+              <h3>건축</h3>
+              <p>
+                글로벌 랜드마크를 통해
+                <br />
+                건축의 새로운 기준을 선도합니다.
+              </p>
+              <a href="#" class="view_more">
+                <span>View More</span>
+                <i></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="business_item" data-title="Civil Engineering">
+            <img
+              src="img/sec_business_bg2_black.png"
+              data-gray="img/sec_business_bg2_black.png"
+              data-color="img/sec_business_bg2.jpg"
+            />
+            <div class="info">
+              <h3>토목</h3>
+              <p>
+                국가의 인프라를 책임지는 기술력으로
+                <br />
+                미래를 설계합니다.
+              </p>
+              <a href="#" class="view_more">
+                <span>View More</span>
+                <i></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="business_item" data-title="Residential Building">
+            <img
+              src="img/sec_business_bg3_black.png"
+              data-gray="img/sec_business_bg3_black.png"
+              data-color="img/sec_business_bg3.jpg"
+            />
+            <div class="info">
+              <h3>주택&#x2022;리모델링</h3>
+              <p>
+                더 나은 삶을 고민하는 진심,
+                <br />
+                주거 공간의 혁신을 완성합니다.
+              </p>
+              <a href="#" class="view_more">
+                <span>View More</span>
+                <i></i>
+              </a>
+            </div>
+          </div>
+
+          <div class="business_item" data-title="Plant Electricity">
+            <img
+              src="img/sec_business_bg4_black.png"
+              data-gray="img/sec_business_bg4_black.png"
+              data-color="img/sec_business_bg4.jpg"
+            />
+            <div class="info">
+              <h3>플랜트&#x2022;전기</h3>
+              <p>
+                최적화된 플랜트 솔루션으로
+                <br />
+                산업시설의 내일을 이끌어갑니다.
+              </p>
+              <a href="#" class="view_more">
+                <span>View More</span>
+                <i></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="business_controls">
+          <button type="button" class="business_prev">←</button>
+          <div class="business_dots"></div>
+          <button type="button" class="business_next">→</button>
+        </div>
+      </div>
+    </section>
+    <!-- //section1 -->
+
+    <!-- section2 -->
+    <section class="sec2">
+      <!-- 배경 (JS로 바뀜) -->
+      <div class="sec2_bg"></div>
+
+      <div class="sec2_inner">
+        <!-- 텍스트 영역 -->
+        <div class="sec2_text">
+          <p class="sec2_label">MASTERPIECE</p>
+          <h2 class="sec2_title">Atlantis the Royal</h2>
+          <div class="sec2_info left">
+            <p class="small">world’s only</p>
+            <p class="desc">두바이 팜 주메이라 인공섬의 유일무이한<br />디자인을 자랑하는 초대형 걸작</p>
+
+            <a href="#" class="sec2_view_more">
+              <span>View More</span>
+              <i></i>
+            </a>
+          </div>
+          <div class="sec2_info right">
+            <div class="num_box">
+              <p class="big">94</p>
+              <p class="small">
+                swimming <br />
+                pools
+              </p>
+            </div>
+            <p class="desc">
+              44층 높이의 대규모 호텔과 레지던스 <br />
+              S자 곡선과 레고블록을 닮은 <br />
+              웅장한 비정형 외관
+            </p>
+          </div>
+        </div>
+
+        <!-- 슬라이드 -->
+        <div class="swiper sec2_swiper">
+          <div class="swiper-pagination"></div>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-bg="img/sec2BG_1.jpg">
+              <img src="img/sec_masterpiece_slider1.jpg" />
+              <p class="slide_title">아틀란티스 더 로열</p>
+            </div>
+
+            <div class="swiper-slide" data-bg="img/sec2BG_2.jpg">
+              <img src="img/sec_masterpiece_slider2.jpg" />
+              <p class="slide_title">마리나 베이 샌즈호텔</p>
+            </div>
+
+            <div class="swiper-slide" data-bg="img/sec2BG_3.jpg">
+              <img src="img/sec_masterpiece_slider3.jpg" />
+              <p class="slide_title">아난티 코브</p>
+            </div>
+
+            <div class="swiper-slide" data-bg="img/sec2BG_4.jpg">
+              <img src="img/sec_masterpiece_slider4.jpg" />
+              <p class="slide_title">9호선 고속터미널역 (923)</p>
+            </div>
+
+            <div class="swiper-slide" data-bg="img/sec2BG_5.jpg">
+              <img src="img/sec_masterpiece_slider5.jpg" />
+              <p class="slide_title">싱가포르 마리나 해안 고속도로</p>
+            </div>
+
+            <div class="swiper-slide" data-bg="img/sec2BG_6.jpg">
+              <img src="img/sec_masterpiece_slider6.jpg" />
+              <p class="slide_title">래플즈 시티 싱가포르</p>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+    <!-- //section2 -->
+
+    <!-- SECTION3 -->
+    <section id="sec3">
+      <div class="sec3_inner">
+        <div class="sec3_title">
+          <h2>Global SSANGYONG</h2>
+          <p>쌍용건설은 전 세계를 무대로, 건설 그 이상의 가치를 실현해가고 있습니다</p>
+        </div>
+
+        <div class="sec3_content">
+          <div class="sec3_box left">
+            <h3>Newwork</h3>
+            <a href="#" class="sec3_view_more">
+              <span>View More</span>
+              <i></i>
+            </a>
+          </div>
+
+          <div class="cube_wrap">
+            <div class="cube">
+              <div class="cube_face front">
+                <img src="img/sec3_1.jpg" alt="" />
+              </div>
+              <div class="cube_face right">
+                <img src="img/sec3_2.jpg" alt="" />
+              </div>
+              <div class="cube_face back">
+                <img src="img/sec3_3.jpg" alt="" />
+              </div>
+              <div class="cube_face left">
+                <img src="img/sec3_4.jpg" alt="" />
+              </div>
+              <div class="cube_face top">
+                <img src="img/sec3_5.jpg" alt="" />
+              </div>
+              <div class="cube_face bottom">
+                <img src="img/sec3_6.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="sec3_box right">
+            <h3>Project Map</h3>
+            <a href="#" class="sec3_view_more">
+              <span>View More</span>
+              <i></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //section3 -->
+
+    <!-- SECTION4 -->
+    <section id="sec4">
+      <div class="sec4_inner">
+        <!-- 제목 -->
+        <div class="sec4_top">
+          <h2>News</h2>
+        </div>
+
+        <div class="sec4_content">
+          <!-- 왼쪽 -->
+          <div class="news_area">
+            <!-- View More 위치 -->
+            <div class="news_head">
+              <a href="#" class="sec4_view_more">
+                <span>View More</span>
+                <i></i>
+              </a>
+            </div>
+
+            <!-- 뉴스 리스트 -->
+            <ul class="news_list">
+              <li>
+                <a href="#">쌍용건설, 2026 신입 공개 채용…16일까지 접수</a>
+                <span>2026.03.05</span>
+              </li>
+
+              <li>
+                <a href="#">‘쌍용 더 플래티넘 운수역’ 최고 24대 1 경쟁률로 1순위 마감</a>
+                <span>2026.02.26</span>
+              </li>
+
+              <li>
+                <a href="#">‘쌍용 더 플래티넘 운수역’ 특공서 100% 소진…역대 최고가 서울 규제 효과 ‘톡톡’</a>
+                <span>2026.02.24</span>
+              </li>
+
+              <li>
+                <a href="#">중견사, 정비시장 ‘태풍의 눈’…올해 벌써 3곳 중 1곳 품었다</a>
+                <span>2026.02.23</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 오른쪽 -->
+          <div class="sec4_side">
+            <a href="#" class="side_item">
+              <div class="side_img">
+                <img src="img/sec4_img1.jpg" alt="" />
+              </div>
+              <p class="title">Brochure</p>
+              <p class="desc">쌍용건설의 대표 성과를 한눈에 확인해 보세요.</p>
+            </a>
+
+            <a href="#" class="side_item">
+              <div class="side_img">
+                <img src="img/sec4_img2.jpg" alt="" />
+              </div>
+              <p class="title">Awards</p>
+              <p class="desc">명품건설 쌍용의 수상실적을 소개합니다.</p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- //section4 -->
+
+    <!-- SECTION5 -->
+    <section id="sec5">
+      <div class="sec5_inner">
+        <h2 class="sec5_title">Recruitment</h2>
+
+        <!-- 메인 비주얼 -->
+        <div class="recruit_visual">
+          <img src="img/sec5_bg.jpg" alt="" />
+
+          <div class="recruit_text">
+            <h3>
+              당신의 빛나는 도전이<br />
+              쌍용건설의 내일을 만듭니다.
+            </h3>
+
+            <div class="recruit_btns">
+              <a href="#">
+                <span>채용공고</span>
+                <i></i>
+              </a>
+              <a href="#">
+                <span>직무소개</span>
+                <i></i>
+              </a>
+              <a href="#">
+                <span>복리후생</span>
+                <i></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 하단 브랜드 -->
+
+        <div class="brand_wrap">
+          <a href="#" class="brand_item sae">
+            <div>
+              <h3>글로벌세아그룹</h3>
+              <p>세계적인 의류제조수출기업, 다양한 산업을 이끄는 글로벌 리더</p>
+            </div>
+          </a>
+
+          <a href="#" class="brand_item platinum">
+            <div>
+              <h3>더 플래티넘</h3>
+              <p>최고의 서비스와 상품을 통한 고품격 주거 문화의 새로운 시대</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- //section5 -->
+
+    <footer id="footer">
+      <div class="footer_inner">
+        <div class="footer_left">
+          <h2>
+            For The<br />
+            Best Quality
+          </h2>
+        </div>
+
+        <div class="footer_right">
+          <div class="footer_top">
+            <h1 class="footer_logo">
+              <img src="img/footer_logo.svg" alt="쌍용건설" />
+            </h1>
+
+            <ul class="footer_sns">
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+              </li>
+            </ul>
+
+            <div class="footer_family">
+              <a href="#">글로벌세아 <span>↗</span></a>
+              <a href="#">더 플래티넘 <span>↗</span></a>
+            </div>
+          </div>
+
+          <ul class="footer_links">
+            <li><a href="#">쿠키 정책</a></li>
+            <li><a href="#">사이버 감사실</a></li>
+            <li><a href="#">찾아오시는 길</a></li>
+            <li><a href="#">이메일 무단 수집 거부</a></li>
+          </ul>
+
+          <div class="footer_info">
+            <p>
+              우편번호 05510 서울 송파구 올림픽로 299(신천동)
+              <span>|</span>
+              대표전화: 02-3433-7114
+              <span>|</span>
+              팩스: 02-3433-7111
+              <span>|</span>
+              E-mail: ssyenc@ssyenc.com
+            </p>
+            <p>Copyright ⓒ SSANGYONG Engineering & Construction Co., LTD.All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <button id="topBtn" aria-label="맨 위로 이동">
+      <svg viewBox="0 0 60 60">
+        <circle class="bg" cx="30" cy="30" r="27"></circle>
+        <circle class="progress" cx="30" cy="30" r="27"></circle>
+      </svg>
+      <span>↑</span>
+    </button>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+      const menuBtn = document.querySelector(".menu_btn");
+      const nav = document.querySelector(".nav");
+
+      menuBtn.addEventListener("click", () => {
+        nav.classList.toggle("active");
+        menuBtn.classList.toggle("active");
+      });
+      // header
+
+      const items = document.querySelectorAll(".business_item");
+      const title = document.querySelector(".main_title");
+      const wrap = document.querySelector(".business_wrap");
+
+      const prevBtn = document.querySelector(".business_prev");
+      const nextBtn = document.querySelector(".business_next");
+      const dotsWrap = document.querySelector(".business_dots");
+
+      let currentIndex = 0;
+
+      /* dots 생성 */
+      items.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        if (index === 0) dot.classList.add("active");
+
+        dot.addEventListener("click", () => {
+          currentIndex = index;
+          mobileSlide();
+        });
+
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll(".business_dots button");
+
+      function resetImages() {
+        items.forEach((item) => {
+          const img = item.querySelector("img");
+          img.src = img.dataset.gray;
+          item.classList.remove("active");
+        });
+      }
+
+      function setActive(index) {
+        resetImages();
+
+        items[index].classList.add("active");
+        dots.forEach((dot) => dot.classList.remove("active"));
+        dots[index].classList.add("active");
+
+        const img = items[index].querySelector("img");
+        img.src = img.dataset.color;
+
+        title.textContent = items[index].dataset.title;
+      }
+
+      /* PC 이동값 */
+      function pcSlide(index) {
+        const itemWidth = items[0].offsetWidth;
+        const gap = 20;
+
+        /*
+    index 0 = x: 100
+    index 1 = x: -160
+    index 2 = x: -420
+    index 3 = x: -680
+
+    마지막 카드 hover해도 첫 번째 카드가 완전히 사라지지 않음
+  */
+        const moveX = 100 - index * 260;
+
+        gsap.to(wrap, {
+          x: moveX,
+          duration: 0.5,
+          ease: "power2.out",
+        });
+      }
+
+      /* 모바일 슬라이드 */
+      function mobileSlide() {
+        if (window.innerWidth > 980) return;
+
+        const itemWidth = items[0].offsetWidth;
+        const gap = window.innerWidth <= 480 ? 16 : 24;
+
+        const centerX = (window.innerWidth - itemWidth) / 2;
+        const moveX = centerX - (itemWidth + gap) * currentIndex;
+
+        gsap.to(wrap, {
+          x: moveX,
+          duration: 0.45,
+          ease: "power2.out",
+        });
+
+        setActive(currentIndex);
+      }
+
+      /* PC hover */
+      items.forEach((item, index) => {
+        item.addEventListener("mouseenter", () => {
+          if (window.innerWidth <= 980) return;
+
+          currentIndex = index;
+          setActive(index);
+
+          gsap.to(item, {
+            y: -10,
+            duration: 0.3,
+          });
+
+          pcSlide(index);
+        });
+
+        item.addEventListener("mouseleave", () => {
+          if (window.innerWidth <= 980) return;
+
+          gsap.to(item, {
+            y: 0,
+            duration: 0.3,
+          });
+
+          title.textContent = "Design and Build";
+        });
+      });
+
+      /* 모바일 버튼 */
+      nextBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % items.length;
+        mobileSlide();
+      });
+
+      prevBtn.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + items.length) % items.length;
+        mobileSlide();
+      });
+
+      /* 반응형 */
+      window.addEventListener("resize", () => {
+        if (window.innerWidth <= 980) {
+          mobileSlide();
+        } else {
+          pcSlide(currentIndex);
+        }
+      });
+
+      /* 초기 */
+      if (window.innerWidth <= 980) {
+        mobileSlide();
+      } else {
+        pcSlide(0);
+      }
+
+      // ===== section2 데이터 =====
+      const sec2Data = [
+        {
+          label: "MASTERPIECE",
+          title: "Atlantis the Royal",
+          leftTitle: "World’s Only",
+          leftDesc: "두바이 팜 주메이라 인공섬의 유일무이한<br>디자인을 자랑하는 초대형 걸작",
+          num: "94",
+          unit: "Swimming<br>Pools",
+          rightDesc: "44층 높이의 대규모 호텔과 레지던스<br>S자 곡선과 레고 블록을 닮은<br>웅장한 비정형 외관",
+        },
+        {
+          label: "MASTERPIECE",
+          title: "Marina Bay Sands Hotel",
+          leftTitle: "Beyond Limits",
+          leftDesc: "고난이도 기술력으로 완성된<br>싱가포르 하늘을 잇는 독보적인 랜드마크",
+          num: "52°",
+          unit: "",
+          rightDesc: "피사의 사탑보다 10배 기울어진<br>최고 난이도의 건축물",
+        },
+        {
+          label: "MASTERPIECE",
+          title: "The Ananti Cove",
+          leftTitle: "New History",
+          leftDesc: "부산 바다를 품은 바다 위의 성,<br>27개월의 여정을 통해<br>새로운 역사를 쓴 휴식의 성지",
+          num: "10",
+          unit: "Times",
+          rightDesc: "축구장 10배가 넘는 부지,<br>약 6만 평 규모의 건축 연면적,<br>축구장 5배에 달하는 현장길이",
+        },
+        {
+          label: "MASTERPIECE",
+          title: "Seoul 923 Subway Station",
+          leftTitle: "Creativity<br>Technology",
+          leftDesc: "최고의 기술력과 창조적인 사고로<br>성공적인 개통을 이룬 9호선의 상징적 허브",
+          num: "15",
+          unit: "cm",
+          rightDesc: "초정밀 공법으로 3호선 지하철과의<br>15cm 차이를 극복한 초고난도 랜드마크",
+        },
+        {
+          label: "MASTERPIECE",
+          title: "Marina Coastal Expressway",
+          leftTitle: "Hidden Landmark",
+          leftDesc: "지반침하와 침수를 이겨낸,<br>바다 아래 숨겨진 10차선의 구조 예술",
+          num: "8.2",
+          unit: "억원<br>/ 1m",
+          rightDesc: "1m 당 8억 2,000만원,<br>고속도로 역사상 가장 비싼 구간이<br>증명한 기술력의 정점",
+        },
+        {
+          label: "MASTERPIECE",
+          title: "Raffles City Singapore",
+          leftTitle: "Construction<br>Innovation",
+          leftDesc: "첨단 시공 기술과 과감한 도전으로 완성한<br>초고층 건설 혁신",
+          num: "226",
+          unit: "m<br>73층",
+          rightDesc:
+            "1986년 완공 당시 세계 최고층 호텔로<br>기네스북에 등재되며 자리 잡은<br>싱가포르의 상징적 복합단지",
+        },
+      ];
+
+      // ===== DOM =====
+      const sec2Label = document.querySelector(".sec2_label");
+      const sec2Title = document.querySelector(".sec2_title");
+      const sec2Left = document.querySelector(".sec2_info.left");
+      const sec2Right = document.querySelector(".sec2_info.right");
+      const sec2Bg = document.querySelector(".sec2_bg");
+
+      // ===== 텍스트 변경 함수 =====
+      function changeSec2Text(index) {
+        const data = sec2Data[index];
+
+        // 라벨
+        sec2Label.textContent = data.label;
+
+        // 제목
+        sec2Title.innerHTML = data.title;
+
+        // 왼쪽
+        sec2Left.innerHTML = `
+  <p class="small">${data.leftTitle}</p>
+  <p class="desc">${data.leftDesc}</p>
+
+  <a href="#" class="sec2_view_more">
+    <span>View More</span>
+    <i></i>
+  </a>
+`;
+
+        // 오른쪽
+        sec2Right.innerHTML = `
+    <div class="num_box">
+      <p class="big">${data.num}</p>
+      ${data.unit ? `<p class="small">${data.unit}</p>` : ""}
+    </div>
+    <p class="desc">${data.rightDesc}</p>
+  `;
+      }
+
+      // ===== Swiper =====
+      const swiper = new Swiper(".sec2_swiper", {
+        loop: true,
+        slidesPerView: 1,
+        centeredSlides: true,
+
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        on: {
+          init: function () {
+            const realIndex = this.realIndex;
+            const slides = document.querySelectorAll(".sec2_swiper .swiper-slide");
+
+            // 배경
+            sec2Bg.style.backgroundImage = `url(${slides[realIndex].dataset.bg})`;
+
+            // 텍스트
+            changeSec2Text(realIndex);
+          },
+
+          slideChange: function () {
+            const realIndex = this.realIndex;
+            const slides = document.querySelectorAll(".sec2_swiper .swiper-slide");
+
+            // 배경
+            sec2Bg.style.backgroundImage = `url(${slides[realIndex].dataset.bg})`;
+
+            // 텍스트
+            changeSec2Text(realIndex);
+          },
+        },
+      });
+
+      //===============section3=================
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to(".cube", {
+        rotateY: 360,
+        rotateX: 360,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#sec3",
+          start: "top top",
+          end: "+=1000",
+          scrub: 1,
+          pin: true,
+        },
+      });
+
+      //===============section5=================
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: "#sec5",
+            start: "top 75%",
+            toggleActions: "play none none none",
+          },
+        })
+        .to("#sec5 .sec5_title", {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          ease: "power3.out",
+        })
+        .to(
+          "#sec5 .recruit_visual",
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.9,
+            ease: "power3.out",
+          },
+          "-=0.45",
+        )
+        .to(
+          "#sec5 .brand_wrap",
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.8,
+            ease: "power3.out",
+          },
+          "-=0.35",
+        );
+
+      //=============== TOP BUTTON =================
+      const topBtn = document.getElementById("topBtn");
+      const progressCircle = document.querySelector("#topBtn .progress");
+      const footer = document.querySelector("#footer");
+
+      const radius = 27;
+      const circumference = 2 * Math.PI * radius;
+
+      // 원 초기 세팅
+      progressCircle.style.strokeDasharray = circumference;
+      progressCircle.style.strokeDashoffset = circumference;
+
+      window.addEventListener("scroll", () => {
+        const scrollTop = window.scrollY;
+        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+
+        // 진행률 계산
+        const progress = scrollTop / docHeight;
+        const offset = circumference - progress * circumference;
+
+        progressCircle.style.strokeDashoffset = offset;
+
+        // footer 위치
+        const footerTop = footer.offsetTop;
+
+        // 버튼 표시 조건
+        if (scrollTop > 300 && scrollTop < footerTop - window.innerHeight * 0.8) {
+          topBtn.classList.add("show");
+        } else {
+          topBtn.classList.remove("show");
+        }
+      });
+
+      // 클릭 시 맨 위로
+      topBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+  </body>
+</html>

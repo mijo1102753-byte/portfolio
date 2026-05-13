@@ -1,0 +1,222 @@
+/* 뉴(새로운) 영역 */
+.new {
+  padding: 100px 0;
+}
+.new h2 {
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+.new_inner {
+  display: flex;
+  gap: 22px;
+}
+.new_left {
+  flex: 1;
+  height: 500px;
+  background: url(../img/new01.jpg) center center;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.new_right {
+  width: 400px;
+  height: 500px;
+  background-color: #f2f2f2;
+  padding: 34px;
+  box-sizing: border-box;
+}
+.new_right .title {
+  font-size: 28px;
+  color: #000;
+}
+.new_right .release {
+  font-size: 15px;
+  color: #333;
+}
+.new_right .star {
+  font-size: 18px;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+.new_right .star i {
+  color: #38116a;
+}
+.new_right .star strong {
+  padding-left: 5px;
+}
+.new_right .summary {
+  font-size: 14px;
+}
+.new_right .summary .genre {
+  padding-bottom: 13px;
+}
+.new_right .summary .genre span {
+  padding: 0 5px;
+}
+.new_right .summary .age {
+  padding-bottom: 10px;
+}
+.new_right .summary .age span {
+  padding: 0 5px;
+}
+.new_right .summary .desc {
+  margin-bottom: 20px;
+  height: 108px;
+  overflow: hidden;
+}
+.new_right .select {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.new_right .select .s1 {
+  width: 49%;
+}
+.ui_select1 {
+  width: 100%;
+  height: 36px;
+  background-color: #292929;
+  color: #fff;
+  padding: 0 10px;
+  display: inline-block;
+  border: 0 none;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+.new_right .select .s2 {
+  width: 49%;
+}
+.new_right .select .s3 {
+  width: 100%;
+  margin-top: 2%;
+}
+.new_right .btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+.new_right .btn a {
+  display: block;
+  padding: 10px 20px 12px 30px;
+  width: 49%;
+  box-sizing: border-box;
+  text-align: center;
+}
+.new_right .btn a.white {
+  background-color: #fff;
+  border: 1px solid #38116a;
+  color: #38116a;
+}
+.new_right .btn a.purple {
+  background-color: #38116a;
+  color: #fff;
+}
+.new .bar {
+  position: relative;
+}
+.new .bar::after {
+  content: "";
+  width: 1px;
+  height: 10px;
+  background-color: #38116a;
+  position: absolute;
+  top: 3px;
+  right: -1px;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1300px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+}
+@media (max-width: 960px) {
+  .new_inner {
+    flex-direction: column;
+    gap: 0;
+  }
+  .new_left {
+    flex: none;
+    width: 100%;
+    height: 400px;
+  }
+  .new_right {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #new {
+    background-color: #d9d9d9;
+  }
+  #new .row {
+    background-color: #fff;
+    padding: 0 24px;
+  }
+  .new {
+    padding: 24px 0;
+  }
+  .new h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 600px) {
+  #new {
+    padding: 16px;
+  }
+  #new .row {
+    padding: 0 16px;
+  }
+  .new_left {
+    height: 200px;
+  }
+  .new_left .play svg {
+    width: 80px;
+    height: 80px;
+  }
+  .new_right {
+    padding: 17px;
+  }
+  .new_right .title {
+    font-size: 22px;
+  }
+  .new_right .star {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .new_right .summary .genre {
+    padding-bottom: 5px;
+  }
+  .new_right .summary .age {
+    padding-bottom: 5px;
+  }
+  .new_right .summary .desc {
+    margin-bottom: 10px;
+  }
+  .new_right .select .s1 {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  .new_right .select .s2 {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  #new {
+    padding: 12px;
+  }
+  #new .row {
+    padding: 0 12px;
+  }
+  .new h2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+}

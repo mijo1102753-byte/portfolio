@@ -1,0 +1,45 @@
+/* imageType */
+#imageType {
+}
+.image_inner {
+  display: flex;
+  justify-content: space-between;
+}
+.image {
+  width: 49%;
+  height: 370px;
+  color: #fff;
+  padding: 200px 30px 30px 30px;
+  box-sizing: border-box;
+}
+.image.img1 {
+  background: url(../img/cake_red.png) no-repeat center/ cover;
+}
+.image.img2 {
+  background: url(../img/cake_choco.png) no-repeat center/ cover;
+}
+.image_title {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+.image_desc {
+  margin-bottom: 10px;
+  padding-right: 100px;
+  line-height: 1.4;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 2; /* 제한할 텍스트의 줄 수 */
+}
+.image_btn {
+  line-height: 140%;
+  font-weight: 300;
+  background-color: #531834;
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.image_btn.choco {
+  background-color: #1c0206;
+}

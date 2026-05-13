@@ -1,0 +1,787 @@
+/* ===================== section3 ===================== */
+#sec3 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* 전체 배경 */
+.sec3_bg {
+  position: absolute;
+  inset: 0;
+  background: url("img/sec3_BG.png") no-repeat center / cover;
+  z-index: 1;
+}
+
+/* 프로필 전체 박스 */
+.sec3_inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1500px;
+  height: 750px;
+  padding: 28px 12px 35px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* 박스 이미지 */
+.sec3_box_img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sec3_box_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 글들은 무조건 박스 이미지 위 */
+.profile_top,
+.profile_bottom {
+  position: relative;
+  z-index: 5;
+}
+
+/* 상단 */
+.profile_top {
+  width: 100%;
+  height: 190px;
+  margin-bottom: 10px;
+}
+
+/* 눈 이미지 */
+
+.profile_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 6;
+}
+
+.profile_img img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  object-fit: initial;
+}
+
+/* 이름/소개 */
+.profile_info {
+  position: absolute;
+  left: 405px;
+  top: 0;
+  z-index: 6;
+  font-family: "Pretendard", sans-serif;
+  color: #111;
+}
+
+.profile_name {
+  position: relative;
+  left: 125%;
+  text-align: center;
+}
+
+.profile_info .eng {
+  font-family: "Roboto Serif", serif;
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.profile_info .kor {
+  font-size: 33px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.profile_info .birth {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.profile_info .desc {
+  position: absolute;
+  left: -405px;
+  top: 190px;
+  width: 1000px;
+  font-size: 25px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+
+/* PROFILE */
+.profile_info h2 {
+  position: absolute;
+  left: 680px;
+  top: -128px;
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 300;
+  line-height: 1;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* 하단 */
+.profile_bottom {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 0.7fr 0.75fr;
+  gap: 100px;
+  width: 100%;
+  padding: 134px 30px;
+}
+
+.profile_bottom .col h3 {
+  font-family: "Roboto Serif", serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.profile_bottom .col p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.profile_bottom .col p.date {
+  color: #796868;
+  letter-spacing: 0.02em;
+}
+.profile_bottom .col p.academy_text {
+  font-size: 16px;
+  line-height: 1.45;
+}
+.profile_info .desc p {
+  white-space: nowrap;
+}
+
+/* 커서 */
+.typing_cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #111;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* 스킬 */
+.skill_icons {
+  display: grid;
+  grid-template-columns: repeat(2, 32px);
+  gap: 16px 23px;
+}
+
+.skill_icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.skill_icons .html_logo,
+.skill_icons .css_logo {
+  width: 32px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===================== sub header ===================== */
+#subHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 58px;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+}
+
+.sub_header_inner {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 150px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub_logo img {
+  width: 58px;
+  display: block;
+}
+
+.sub_nav {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.sub_nav a {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.sub_nav a::after {
+  content: attr(data-name);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  color: #000;
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  pointer-events: none;
+
+  transition: opacity 0.25s ease;
+}
+
+.sub_nav a:hover {
+  color: transparent;
+}
+
+.sub_nav a:hover::after {
+  opacity: 1;
+}
+
+.sub_nav a:hover {
+  display: block;
+}
+
+.sub_nav_circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #00000063;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* 움직이는 선 원 */
+.nav_circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  transition:
+    left 0.45s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+}
+
+/* 퍼지는 원 */
+.sub_cursor_trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid rgba(0, 0, 0, 0.486);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2147483646;
+
+  animation: subCursorPulse 1s ease-out forwards;
+}
+
+@keyframes subCursorPulse {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.8);
+  }
+}
+
+/* 클릭 */
+.sub_cursor.click {
+  width: 34px;
+  height: 34px;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== copyright ===================== */
+.copyright {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  z-index: 219;
+}
+
+.copyright p {
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.938);
+
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* ===================== 1600 ===================== */
+@media (max-width: 1600px) {
+  .sub_header_inner {
+    padding: 0 110px;
+  }
+
+  .sub_nav {
+    gap: 36px;
+  }
+
+  .sec3_inner {
+    width: 1350px;
+    height: 675px;
+    padding: 25px 11px 32px;
+  }
+
+  .profile_top {
+    height: 170px;
+    margin-bottom: 9px;
+  }
+
+  .profile_img img {
+    width: 365px;
+  }
+
+  .profile_info {
+    left: 365px;
+    top: 0;
+  }
+
+  .profile_info h2 {
+    left: 610px;
+    top: -112px;
+    font-size: 82px;
+  }
+
+  .profile_name {
+    left: 110%;
+  }
+
+  .profile_info .eng {
+    font-size: 33px;
+    margin-bottom: 15px;
+  }
+
+  .profile_info .kor {
+    font-size: 30px;
+  }
+
+  .profile_info .birth {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  .profile_info .desc {
+    left: -365px;
+    top: 170px;
+    width: 900px;
+    font-size: 22px;
+  }
+
+  .profile_bottom {
+    grid-template-columns: 1.1fr 1.1fr 0.7fr 0.75fr;
+    gap: 75px;
+    padding: 120px 26px 0;
+  }
+
+  .profile_bottom .col h3 {
+    font-size: 23px;
+  }
+
+  .profile_bottom .col p {
+    font-size: 16px;
+  }
+
+  .profile_bottom .col p.academy_text {
+    font-size: 15px;
+  }
+
+  .skill_icons {
+    grid-template-columns: repeat(2, 30px);
+    gap: 14px 20px;
+  }
+
+  .skill_icons img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .skill_icons .html_logo,
+  .skill_icons .css_logo {
+    width: 30px;
+    height: 37px;
+  }
+}
+
+/* ===================== 1300 ===================== */
+@media (max-width: 1300px) {
+  .sub_header_inner {
+    padding: 0 70px;
+  }
+
+  .sub_nav {
+    gap: 30px;
+  }
+
+  .sec3_inner {
+    width: 1180px;
+    height: 590px;
+    padding: 22px 10px 28px;
+  }
+
+  .profile_top {
+    height: 150px;
+    margin-bottom: 8px;
+  }
+
+  .profile_img img {
+    width: 320px;
+  }
+
+  .profile_info {
+    left: 320px;
+    top: 0;
+  }
+
+  .profile_info h2 {
+    left: 520px;
+    top: -95px;
+    font-size: 72px;
+  }
+
+  .profile_name {
+    left: 95%;
+  }
+
+  .profile_info .eng {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .profile_info .kor {
+    font-size: 27px;
+  }
+
+  .profile_info .birth {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .profile_info .desc {
+    left: -320px;
+    top: 150px;
+    width: 820px;
+    font-size: 20px;
+  }
+
+  .profile_bottom {
+    grid-template-columns: 1.1fr 1.1fr 0.7fr 0.75fr;
+    gap: 55px;
+    padding: 105px 22px 0;
+  }
+
+  .profile_bottom .col h3 {
+    font-size: 21px;
+  }
+
+  .profile_bottom .col p {
+    font-size: 15px;
+  }
+
+  .profile_bottom .col p.academy_text {
+    font-size: 14px;
+  }
+
+  .skill_icons {
+    grid-template-columns: repeat(2, 28px);
+    gap: 13px 18px;
+  }
+
+  .skill_icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .skill_icons .html_logo,
+  .skill_icons .css_logo {
+    width: 28px;
+    height: 34px;
+  }
+}
+
+/* ===================== 1150 ===================== */
+@media (max-width: 1150px) {
+  .sub_header_inner {
+    padding: 0 50px;
+  }
+
+  .sub_nav {
+    gap: 24px;
+  }
+
+  .sub_nav a,
+  .sub_nav a::after {
+    font-size: 14px;
+  }
+
+  .sec3_inner {
+    width: 1030px;
+    height: 560px;
+    padding: 20px 10px 26px;
+  }
+
+  .profile_top {
+    height: 142px;
+    margin-bottom: 6px;
+  }
+
+  .profile_img img {
+    width: 285px;
+  }
+
+  .profile_info {
+    left: 285px;
+    top: 0;
+  }
+
+  .profile_info h2 {
+    left: 455px;
+    top: -86px;
+    font-size: 64px;
+  }
+
+  .profile_name {
+    left: 84%;
+  }
+
+  .profile_info .eng {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+
+  .profile_info .kor {
+    font-size: 24px;
+  }
+
+  .profile_info .birth {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .profile_info .desc {
+    left: -285px;
+    top: 142px;
+    width: 730px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+
+  .profile_bottom {
+    grid-template-columns: 1.1fr 1.1fr 0.7fr 0.75fr;
+    gap: 38px;
+    padding: 98px 15px 0;
+  }
+
+  .profile_bottom .col h3 {
+    font-size: 19px;
+    margin-bottom: 10px;
+  }
+
+  .profile_bottom .col p,
+  .profile_bottom .col p.academy_text {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .skill_icons {
+    grid-template-columns: repeat(2, 26px);
+    gap: 11px 15px;
+  }
+
+  .skill_icons img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .skill_icons .html_logo,
+  .skill_icons .css_logo {
+    width: 26px;
+    height: 32px;
+  }
+}
+
+/* ===================== 980 ===================== */
+@media (max-width: 980px) {
+  .sub_header_inner {
+    padding: 0 35px;
+  }
+
+  .sub_logo img {
+    width: 50px;
+  }
+
+  .sub_nav {
+    gap: 20px;
+  }
+
+  .sub_nav a,
+  .sub_nav a::after {
+    font-size: 13px;
+  }
+
+  .sub_nav_circle {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sec3_inner {
+    width: 900px;
+    height: 580px;
+    padding: 20px 10px 25px;
+  }
+
+  .profile_top {
+    height: 135px;
+    margin-bottom: 5px;
+  }
+
+  .profile_img img {
+    width: 250px;
+  }
+
+  .profile_info {
+    left: 250px;
+    top: 0;
+  }
+
+  .profile_info h2 {
+    left: 380px;
+    top: -78px;
+    font-size: 58px;
+  }
+
+  .profile_name {
+    left: 72%;
+  }
+
+  .profile_info .eng {
+    font-size: 25px;
+    margin-bottom: 9px;
+  }
+
+  .profile_info .kor {
+    font-size: 22px;
+  }
+
+  .profile_info .birth {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  .profile_info .desc {
+    left: -250px;
+    top: 135px;
+    width: 660px;
+    font-size: 17px;
+    line-height: 1.45;
+  }
+
+  .profile_bottom {
+    grid-template-columns: 1.1fr 1.1fr 0.7fr 0.75fr;
+    gap: 26px;
+    padding: 92px 12px 0;
+  }
+
+  .profile_bottom .col h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .profile_bottom .col p,
+  .profile_bottom .col p.academy_text {
+    font-size: 14px;
+    line-height: 1.35;
+  }
+
+  .skill_icons {
+    grid-template-columns: repeat(2, 24px);
+    gap: 10px 14px;
+  }
+
+  .skill_icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .skill_icons .html_logo,
+  .skill_icons .css_logo {
+    width: 24px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //배열
+      const arr = [100, 200, 300, 400, 500, "red"];
+      console.log(arr.length);
+
+      //객체
+      const obj = {
+        name: "이름",
+        color: "핑크",
+        lunch: "떡볶이",
+      };
+      console.log(obj.color);
+
+      //결합
+      const box = [
+        { name: "이름", color: "핑크", lunch: "떡볶이" },
+        { name: "이름2", color: "핑크2", lunch: "떡볶이2" },
+        { name: "이름3", color: "핑크3", lunch: "떡볶이3" },
+      ];
+      console.log(box.map((item) => item.name));
+    </script>
+  </body>
+</html>

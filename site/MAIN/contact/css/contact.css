@@ -1,0 +1,423 @@
+.contact-section {
+  padding-bottom: 150px;
+  font-family: "Playfair Display", serif;
+}
+
+.main-title {
+  font-family: "Playfair Display", serif;
+  font-size: 80px;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 80px;
+  letter-spacing: 2px;
+  padding: 100px 0 30px;
+  border-bottom: 1px solid #2c2a28;
+}
+
+/* 상단 오피스 정보 영역 */
+
+.office-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  margin-bottom: 150px;
+
+  width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #f5f1e8;
+  border-radius: 15px;
+
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-sizing: border-box;
+}
+.office-container::after {
+  content: "";
+  position: absolute;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 1px;
+  height: 18%;
+  background-color: #2c2a28;
+  opacity: 0.2;
+}
+
+.office-box {
+  flex: 1;
+  padding: 40px 40px;
+  z-index: 1;
+}
+
+.office-box h2 {
+  font-size: 38px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+.info-row .value {
+  color: #6b645c;
+}
+.info-row .value-group {
+  color: #6b645c;
+}
+.label {
+  width: 100px;
+  font-weight: bold;
+}
+
+.value,
+.value-group {
+  flex: 1;
+  text-align: right;
+}
+
+/* 하단 문의 폼 영역 */
+.contact-us-container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.form-title {
+  font-family: "Playfair Display", serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #2c2a28;
+  padding-bottom: 25px;
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.project-field {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 40px;
+  display: block;
+}
+/* 2. 글자 바로 밑에 짧은 선 만들기 */
+.project-label-wrapper {
+  display: table;
+  border-bottom: 1px solid #a89f94;
+}
+
+/* 3. 혹시 모를 input의 기본 선도 제거 */
+.project-field input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 5px 0;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 60px;
+  row-gap: 40px;
+}
+.name-field {
+  grid-column: 1 / span 2;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.name-field .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid#A89F94;
+  width: calc(50% - 30px);
+  padding-bottom: 10px;
+}
+.name-field .input-wrapper input {
+  font-family: "Playfair Display", serif;
+}
+
+.form-group:not(.name-field):not(.project-field) {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #a89f94;
+  padding-bottom: 10px;
+}
+
+.form-group.no-border {
+  border-bottom: none;
+}
+.form-group label {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.required {
+  color: #ff8a8a;
+  margin-left: 3px;
+}
+
+.form-group input,
+.form-group textarea {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  padding: 5px 0;
+}
+
+/* 동의 및 전송 영역 */
+.form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* 기본 체크박스 숨기기 */
+.agree-box input[type="checkbox"] {
+  display: none;
+}
+
+.agree-box label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 15px;
+  font-size: 16px;
+  color: #2c2a28;
+}
+
+.custom-check {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #2c2a28;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s;
+}
+.custom-check span {
+  font-size: 18px;
+}
+.agree-box input[type="checkbox"]:checked + label .custom-check {
+  background-color: #2c2a28;
+}
+
+.agree-box input[type="checkbox"]:checked + label .custom-check::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.find-out-more {
+  text-decoration: underline;
+  color: #6b645c;
+}
+
+.submit-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.send-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+  font-family: "Playfair Display", serif;
+}
+
+.send-btn .icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #2c2a28;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+  overflow: hidden;
+}
+
+/* 화살표 글자 기본 설정 */
+.send-btn .arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* --- 호버 시 효과 --- */
+.send-btn:hover .icon {
+  background-color: #2c2a28;
+  color: #fff;
+}
+
+.send-btn:hover .arrow {
+  animation: arrowMove 0.4s ease-out;
+}
+@keyframes arrowMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  49% {
+    transform: translate(20px, -20px);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(-20px, 20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* topBtn */
+#topBtn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  font-size: 40px;
+  color: #f5f1e8a8;
+
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1300px) {
+  .office-container,
+  .contact-us-container {
+    width: 90%;
+    max-width: none;
+  }
+
+  .office-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 10px;
+  }
+
+  .office-container::after {
+    display: none;
+  }
+  .office-box:first-child {
+    border-bottom: 1px solid rgba(44, 42, 40, 0.1);
+    padding-bottom: 40px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .name-field {
+    grid-column: 1;
+  }
+  .name-field .input-wrapper {
+    width: 100%;
+  }
+  .main-title {
+    font-size: 60px;
+    padding: 80px 0 20px;
+  }
+  .form-title {
+    font-size: 36px;
+  }
+  .form-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .find-out-more {
+    align-self: flex-end;
+  }
+}
+@media (max-width: 720px) {
+  .header_inner {
+    height: 58px;
+  }
+  .office-container {
+    width: 95%;
+    padding: 30px 15px;
+    gap: 0;
+    box-sizing: border-box;
+  }
+  .main-title {
+    font-size: 50px;
+  }
+
+  .office-box:first-child {
+    border-bottom: 1px solid rgba(44, 42, 40, 0.1);
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+  .office-box {
+    padding: 20px 10px;
+  }
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 25px;
+  }
+
+  .label {
+    width: 100%;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #2c2a28;
+  }
+
+  .value,
+  .value-group {
+    width: 100%;
+    text-align: left;
+    color: #6b645c;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  .office-box h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .name-field .input-wrapper {
+    width: 100%;
+  }
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  .form-group input {
+    font-size: 14px;
+  }
+  .agree-box label {
+    font-size: 14px;
+  }
+  .form-footer {
+    font-size: 14px;
+  }
+}

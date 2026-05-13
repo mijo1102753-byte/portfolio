@@ -1,0 +1,58 @@
+/* ===== 슬라이더 UI 전체 ===== */
+.swiper-button-prev,
+.swiper-button-next {
+  bottom: 0;
+}
+/* pagination (선 6개) */
+.swiper-pagination {
+  position: absolute;
+  bottom: 60px; /* 위치 올림 */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 기본 선 */
+.swiper-pagination-bullet {
+  width: 65px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 0;
+  opacity: 1;
+  margin: 0;
+}
+
+/* 활성 선 */
+.swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+/* ===== 화살표 ===== */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff;
+  top: auto;
+  bottom: 60px; /* pagination이랑 완전히 동일 */
+  transform: translateY(0);
+
+  width: 30px;
+  height: 30px;
+}
+
+/* 화살표 위치 */
+.swiper-button-prev {
+  left: calc(50% - 170px);
+}
+
+.swiper-button-next {
+  right: calc(50% - 170px);
+}
+
+/* 기본 화살표 아이콘 제거하고 커스텀 */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 18px;
+}

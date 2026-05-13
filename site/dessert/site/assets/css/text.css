@@ -1,0 +1,99 @@
+/* textType */
+.text_inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text {
+  width: 32%;
+  margin-bottom: 2%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+.text:hover {
+  background-color: #b9b9b9;
+}
+
+.text_title {
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 10px;
+  position: relative;
+  padding-top: 75px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 한줄생략 */
+}
+.text_title::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: url(../img/icone.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-position 0.2s;
+}
+.text.t1 .text_title::before {
+  background-position: 0 0;
+}
+.text.t2 .text_title::before {
+  background-position: -60px 0;
+}
+.text.t3 .text_title::before {
+  background-position: -120px 0;
+}
+.text.t4 .text_title::before {
+  background-position: -180px 0;
+}
+.text.t5 .text_title::before {
+  background-position: -240px 0;
+}
+.text.t6 .text_title::before {
+  background-position: -300px 0;
+}
+
+.text.t1:hover .text_title::before {
+  background-position: 0 -60px;
+}
+.text.t2:hover .text_title::before {
+  background-position: -60px -60px;
+}
+.text.t3:hover .text_title::before {
+  background-position: -120px -60px;
+}
+.text.t4:hover .text_title::before {
+  background-position: -180px -60px;
+}
+.text.t5:hover .text_title::before {
+  background-position: -240px -60px;
+}
+.text.t6:hover .text_title::before {
+  background-position: -300px -60px;
+}
+
+.text_desc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  color: #666;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.text_btn {
+  font-size: 16px;
+  line-height: 1;
+  text-decoration: underline;
+  text-underline-position: under;
+  color: #666;
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      .wrap {
+        width: 1000px;
+        margin: 0 auto;
+        background: #999;
+      }
+      ul {
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      li {
+        width: 20%;
+        height: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      li:nth-child(1) {
+        background: red;
+      }
+      li:nth-child(2) {
+        background: orange;
+      }
+      li:nth-child(3) {
+        background: green;
+      }
+      li:nth-child(4) {
+        background: blue;
+      }
+      li:nth-child(5) {
+        background: violet;
+      }
+      .iframe {
+        height: 600px;
+        border-color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>iframe연습</h1>
+    <div class="wrap">
+      <ul>
+        <li><a href="../html/sub01.html" target="color">menu01</a></li>
+        <li><a href="../html/sub02.html" target="color">menu02</a></li>
+        <li><a href="../html/sub03.html" target="color">menu03</a></li>
+        <li><a href="../html/sub04.html" target="color">menu04</a></li>
+        <li><a href="violet.html" target="color">menu05</a></li>
+      </ul>
+      <div class="iframe">
+        <iframe src="" frameborder="1" width="100%" height="600" name="color"></iframe>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ku">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 스와이퍼 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- 파비콘 -->
+    <link rel="icon" href="assets/img/favicon.ico" />
+    <link rel="icon" type="image/img" href="assets/img/favicon.png" />
+    <link rel="icon" href="image/svg+xml" href="assets/img/favicon.svg" />
+    <!-- 스타일 -->
+    <link rel="stylesheet" href="assets/css/font.css" />
+    <link rel="stylesheet" href="assets/css/reset.css" />
+    <link rel="stylesheet" href="assets/css/deltaStyle.css" />
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="assets/css/myswiper.css" />
+
+    <!-- 아이콘 -->
+    <script src="https://kit.fontawesome.com/fb27592f06.js" crossorigin="anonymous"></script>
+    <title>Delta Air</title>
+  </head>
+  <body>
+    <!-- 모바일 네비 시작 -->
+    <div id="mNav">
+      <button><i class="fa-solid fa-bars"></i></button>
+      <nav>
+        <ul>
+          <li><a href="#">예약</a></li>
+          <li><a href="#">체크인</a></li>
+          <li><a href="#">나의항공</a></li>
+          <li><a href="#">항공편</a></li>
+          <li><a href="#">여행정보</a></li>
+          <li><a href="#">마일즈</a></li>
+          <li><a href="#">도움말</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">회원가입</a></li>
+          <li class="login"><a href="#">로그인</a></li>
+          <li>
+            <a href="#"><i class="fa-solid fa-bell"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-magnifying-glass-location"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <header id="header" class="active">
+      <div class="container header_inner">
+        <div class="logo">
+          <a href="#">
+            <svg
+              width="119"
+              height="19"
+              viewBox="0 0 119 19"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g id="Canvas" fill="none">
+                <g id="Delta Logo">
+                  <path
+                    id="Fill 23"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 15.3193 14.9921L 11.9221 14.9921L 10.4985 11.2523L 4.59081 11.2523L 3.17354 14.9921L 0 14.9921L 6.0736 0.000732143L 6.0736 0L 9.34827 0L 15.3193 14.9921ZM 9.57821 8.75494L 7.54917 3.45642L 5.51514 8.75494L 9.57821 8.75494Z"
+                    transform="translate(103.008 1.74512)"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    id="Fill 25"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 13.0339 0L 0 0L 0 2.59252L 4.88637 2.59252L 4.88637 14.9291L 8.14751 14.9291L 8.14751 2.59252L 13.0339 2.59252L 13.0339 0Z"
+                    transform="translate(86.4434 1.80908)"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    id="Fill 27"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 9.50923 12.3329L 3.25687 12.3329L 3.25687 0L 0 0L 0 14.9277L 9.50923 14.9277L 9.50923 12.3329Z"
+                    transform="translate(72.4526 1.80957)"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    id="Fill 29"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 3.24619 8.45698L 9.41308 8.45698L 9.41308 5.8652L 3.24619 5.8652L 3.24619 2.59252L 10.2172 2.59252L 10.2172 0L 0 0L 0 14.9284L 10.4436 14.9284L 10.4436 12.3344L 3.24619 12.3344L 3.24619 8.45698Z"
+                    transform="translate(53.0386 1.80896)"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    id="Fill 31"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 0 14.9284L 5.13137 14.9284C 10.4023 14.9284 13.5488 12.1228 13.5488 7.46346C 13.5488 2.80411 10.4023 0 5.13137 0L 0 0L 0 14.9284ZM 3.24316 2.59253L 5.12763 2.59253C 8.55044 2.59253 10.2611 4.32771 10.2611 7.46348C 10.2611 10.597 8.55044 12.3344 5.12763 12.3344L 3.24316 12.3344L 3.24316 2.59253Z"
+                    transform="translate(31.7183 1.80884)"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    id="Fill 35"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 11.4087 0L 11.4087 0.000732143L 11.4079 0L 0 4.95661L 11.4087 4.95661L 17.3598 4.95661L 22.8166 4.95661L 11.4087 0Z"
+                    transform="translate(0 13.7822)"
+                    fill="#FEFEFE"
+                  />
+                  <path
+                    id="Fill 33"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M 10.5725 11.5071L 21.1422 16.7383L 10.5725 0L 10.5725 0.00439286L 10.5718 0L 0 16.7383L 10.5725 11.48L 10.5725 11.5071Z"
+                    transform="translate(0.835938 0)"
+                    fill="#FEFEFE"
+                  />
+                </g>
+              </g>
+            </svg>
+          </a>
+        </div>
+        <nav class="nav">
+          <ul class="gnb">
+            <li><a href="#">예약</a></li>
+            <li><a href="#">체크인</a></li>
+            <li><a href="#">나의항공</a></li>
+            <li><a href="#">항공편</a></li>
+            <li><a href="#">여행정보</a></li>
+            <li><a href="#">마일즈</a></li>
+            <li><a href="#">도움말</a></li>
+          </ul>
+          <ul class="lnb">
+            <li><a href="#">회원가입</a></li>
+            <li class="login"><a href="#">로그인</a></li>
+            <li>
+              <a href="#"><i class="fa-solid fa-bell"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-magnifying-glass-location"></i></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <div id="banner_bg">
+      <div id="banner">
+        <div class="swiper hero">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="assets/img/onboard-safety-infographic2-1600.jpg" alt="" />
+              <div class="banner_txt">
+                <h1>새로운 서비스<br />기준을 마련하였습니다.</h1>
+                <p>여행여정의 모든단계에서 Delta Care Standard 서비스를 누릴 수 있습니다</p>
+                <div class="more">방법 알아보기</div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/img/backgroundIMG.jpg" alt="" />
+              <div class="banner_txt">
+                <h1>새로운 서비스<br />기준을 마련하였습니다.</h1>
+                <p>여행여정의 모든단계에서 Delta Care Standard 서비스를 누릴 수 있습니다</p>
+                <div class="more">방법 알아보기</div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <!-- banner -->
+      <div id="menu">
+        <div class="container menu_inner">
+          <ul class="icon_menu">
+            <li>
+              <a href="#"
+                ><i class="fa-solid fa-bed"></i> <span>호텔둘러보기</span><i class="fa-solid fa-angle-right"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa-solid fa-car"></i> <span>렌터카</span><i class="fa-solid fa-angle-right"></i></a>
+            </li>
+          </ul>
+          <ul class="fee">
+            <li>
+              <a href="#"><span>업데이트된 수하물 및 수수료</span><i class="fa-solid fa-angle-right"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //menu -->
+    </div>
+
+    <main id="main">
+      <div class="container">
+        <h3 class="small_title">
+          델타 고객 경험
+          <h1 class="title">귀하의 여정 전반에 대한 고객 지원</h1>
+          <section class="content01">
+            <div class="box_bg">
+              <div class="box_img">
+                <img src="assets/img/icon-flight-changes-1000.jpg" alt="" />
+              </div>
+              <div class="box_text">
+                <h4>기내 환경</h4>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요. 목적지에 도착하실 때 상쾌한 기분이 드실
+                  수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과 음료로 휴식을 취하고 다양한 무료
+                  엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+            <div class="box_bg">
+              <div class="box_img">
+                <img src="assets/img/icon-ecredit-1000.jpg" alt="" />
+              </div>
+              <div class="box_text">
+                <h4>모험을 떠날 채비를 마치셨나요?</h4>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+            <div class="box_bg">
+              <div class="box_img">
+                <img src="assets/img/icon-bell-1000.jpg" alt="" />
+              </div>
+              <div class="box_text">
+                <h4>기내 환경</h4>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- // content01-->
+          <section class="content02">
+            <div class="box_bg">
+              <div class="box_img">
+                <img src="assets/img/airplane-sea-boeing-snow-1400.jpg" alt="" />
+              </div>
+              <div class="box_text">
+                <h4>기내 환경</h4>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요. 목적지에 도착하실 때 상쾌한 기분이 드실
+                  수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과 음료로 휴식을 취하고 다양한 무료
+                  엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+            <div class="box_bg">
+              <div class="box_img">
+                <img src="assets/img/delta-aircraft-cleaning-hand-1200.jpg" alt="" />
+              </div>
+              <div class="box_text">
+                <h4>모험을 떠날 채비를 마치셨나요?</h4>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- // content02 -->
+          <section class="content03">
+            <div class="bottombox_bg">
+              <div class="bottombox_img"><img src="assets/img/fly-delta-app-1500.jpg" alt="" /></div>
+              <div class="bottombox_text">
+                <h4>플라이 델타 앱 다운로드</h4>
+                <div class="line"></div>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+            <div class="bottombox_bg">
+              <div class="bottombox_img"><img src="assets/img/screens-shop-book-350.jpg" alt="" /></div>
+              <div class="bottombox_text">
+                <h4>플라이 델타 앱 다운로드</h4>
+                <div class="line"></div>
+                <p>
+                  목적지에 도착하실 때 상쾌한 기분이 드실 수 있도록 고급 객실 중 한 곳에서 몸을 쭉 펴고 좋아하는 음식과
+                  음료로 휴식을 취하고 다양한 무료 엔터테인먼트를 즐겨 보세요.
+                </p>
+              </div>
+            </div>
+          </section>
+          <!-- // content03-->
+        </h3>
+      </div>
+    </main>
+    <!-- //main -->
+
+    <footer id="footer">
+      <div class="container">
+        <h1>주제검색...<i class="fa-solid fa-magnifying-glass-plus"></i></h1>
+        <div class="sub_menu">
+          <span>인기주제어:</span>
+          <span><a href="#">도움말</a></span>
+          <span><a href="#">델타 지도 찾기</a></span>
+          <span><a href="#">전자 크레딧</a></span>
+        </div>
+        <div class="footer_menu">
+          <ul>
+            <li class="firstMenu">회사소개<i class="fa-solid fa-angle-down"></i></li>
+            <ul class="footer_dropdown">
+              <li><a href="#">회사소개</a></li>
+              <li><a href="#">채용정보</a></li>
+              <li><a href="#">뉴스허브</a></li>
+              <li><a href="#">투자자 관계(IR)</a></li>
+              <li><a href="#">출장여행</a></li>
+              <li><a href="#">여행사</a></li>
+              <li><a href="#">모바일앱</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li class="firstMenu">고객서비스<i class="fa-solid fa-angle-down"></i></li>
+            <ul class="footer_dropdown">
+              <li><a href="#">도움말</a></li>
+              <li><a href="#">트위터로 문의</a></li>
+              <li><a href="#">의견/고객의 말씀</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li class="firstMenu">사이트 지원<i class="fa-solid fa-angle-down"></i></li>
+            <ul class="footer_dropdown">
+              <li><a href="#">로그인 도움</a></li>
+              <li><a href="#">사이트맵</a></li>
+              <li><a href="#">브라우저 호환성</a></li>
+              <li><a href="#">접근성</a></li>
+              <li><a href="#">예약 정보</a></li>
+            </ul>
+          </ul>
+          <ul>
+            <li class="firstMenu">정책<i class="fa-solid fa-angle-down"></i></li>
+            <ul class="footer_dropdown">
+              <li><a href="#">고객 약속</a></li>
+              <li><a href="#">활주로 지체 대책</a></li>
+              <li><a href="#">법적 고지</a></li>
+              <li><a href="#">지속 가능성</a></li>
+              <li><a href="#">운송 계약</a></li>
+              <li><a href="#">쿠키/개인정보 보호정책/보안</a></li>
+              <li><a href="#">인신 매매 성명서</a></li>
+              <li><a href="#">항공기 등록</a></li>
+              <li><a href="#">손해 배상</a></li>
+              <li><a href="#"> 고객 서비스 및 비상 대책 </a></li>
+            </ul>
+          </ul>
+        </div>
+        <ul class="delta_desc">
+          <li>© 2020 Delta Air Lines, Inc. | 다른 항공사의 항공편이 여행에 포함될 수도 있습니다.</li>
+          <li>
+            전체 서비스 내용과 스카이마일스 혜택은 약관을 기준으로 합니다. 특정 혜택별 상세정보 확인하고
+            <span>스카이마일스 멤버십 안내서 및 프로그램 규정</span>보기
+          </li>
+        </ul>
+        <ul class="footer_sns">
+          <li>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa-solid fa-globe"></i><span>한국,한국어</span></a>
+          </li>
+          <li><a href="#">English</a></li>
+        </ul>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top버튼  -->
+    <div class="top show">
+      <a href="#banner_bg"><i class="fa-solid fa-circle-chevron-up"></i></a>
+    </div>
+
+    <!-- JQUERY JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".hero", {
+        effect: "fade",
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      // 헤더 스크롤 - 제이쿼리
+      $(window).scroll(function () {
+        let scrollTop = $(window).scrollTop();
+        if (scrollTop > 300) {
+          $("#header").addClass("active");
+          $(".top").addClass("show");
+        } else {
+          $("#header").removeClass("active");
+          $(".top").removeClass("show");
+        }
+
+        // if (scrollTop > 500) {
+        //   $(".top").addClass("show");
+        // } else {
+        //   $(".top").removeClass("show");
+        // }
+      });
+
+      // 모바일 메뉴 - 제이쿼리
+      // $("#mNav button").click(function () {
+      //   $("#mNav nav").addClass("dropdown");
+      // });
+      // $("#mNav button").mouseleave(function () {
+      //   $("#mNav nav").removeClass("dropdown");
+      // });
+
+      $("#mNav button").click(function () {
+        $("#mNav nav").toggleClass("dropdown");
+      });
+
+      // 푸터메뉴
+      $(".firstMenu").click(function () {
+        $(this).next(".footer_dropdown").slideToggle();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+/* sliderType */
+.slider_img {
+  width: 100%;
+  height: 580px;
+}
+.s1 {
+  background: url(../img/bannerSlider01.jpg) center top;
+}
+.s2 {
+  background: url(../img/bannerSlider02.jpg) center top;
+}
+.s3 {
+  background: url(../img/bannerSlider03.jpg) center top;
+}
+#sliderType .desc {
+  font-family: "GMarketSans";
+  height: inherit;
+  box-sizing: border-box;
+  padding: 100px 0;
+}
+#sliderType .desc span {
+  background-color: #fff;
+  padding: 1px 14px 2px 14px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-left: 10px;
+}
+#sliderType .desc h3 {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 300;
+  line-height: 1;
+}
+#sliderType .desc p {
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  width: 507px;
+  line-height: 1.33;
+  margin-bottom: 70px;
+}
+#sliderType .desc .btn {
+}
+#sliderType .desc .btn a {
+  display: inline-block;
+  background-color: #fff;
+  padding: 11px 50px;
+}
+#sliderType .desc .btn a.brown {
+  margin-left: 20px;
+  background-color: #202022;
+  color: #fff;
+}
+
+/* swiper */
+.dessert_hero .swiper-button-next,
+.dessert_hero .swiper-button-prev {
+  color: #fff;
+}
+.dessert_hero .swiper-pagination-bullet-active {
+  background: #fff;
+}
+.dessert_hero {
+  --swiper-pagination-bullet-size: 15px;
+  --swiper-pagination-bullet-inactive-color: #030303;
+  --swiper-pagination-bullet-inactive-opacity: 0.6;
+  --swiper-pagination-bullet-horizontal-gap: 20px;
+}

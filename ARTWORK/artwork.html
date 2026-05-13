@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>artwork</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/Fivicon.png" />
+
+    <link rel="stylesheet" href="../css/common/font.css" />
+    <link rel="stylesheet" href="../css/common/reset.css" />
+    <link rel="stylesheet" href="artwork.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="subHeader">
+      <div class="sub_header_inner">
+        <h1 class="sub_logo">
+          <a href="../index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </h1>
+
+        <nav class="sub_nav">
+          <span class="sub_nav_circle"></span>
+
+          <a href="../index.html?target=sec3" data-target="sec3" data-name="PROFILE">빛</a>
+          <a href="../index.html?target=sec4" data-target="sec4" data-name="ARTWORK">충돌</a>
+          <a href="../index.html?target=sec5" data-target="sec5" data-name="VIDEO">그림자</a>
+          <a href="../index.html?target=sec6" data-target="sec6" data-name="WEB">인식</a>
+          <a href="../index.html?target=sec7" data-target="sec7" data-name="CONTACT">균형</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- artwork page -->
+    <main id="artworkPage">
+      <section class="artwork_section">
+        <div class="artwork_bg"></div>
+
+        <!-- 오른쪽 버튼 -->
+        <div class="art_type_btns">
+          <button class="type_btn active" data-type="illustration">illustration</button>
+          <button class="type_btn" data-type="photoshop">photoshop</button>
+        </div>
+
+        <div class="artwork_inner">
+          <div class="program_line">
+            <span>PROGRAM :</span>
+            <img id="programLogo" src="img/illustration_LOGO.png" alt="program logo" />
+          </div>
+
+          <h2 id="artTitle">일러스트 작업물</h2>
+
+          <p id="artDesc" class="art_desc">
+            “특정 컨셉을 기반으로 색감과 형태를 통해 분위기를 시각화한 일러스트 작업입니다.”
+          </p>
+
+          <div class="art_content">
+            <div class="art_text">
+              <h3 id="artSubTitle">CHARACTER ARTWORK</h3>
+              <p id="artSubDesc">“강한 색감과 스타일링으로 캐릭터의 개성과 분위기를 표현한 일러스트 작업”</p>
+            </div>
+
+            <div class="mockup_wrap">
+              <img id="artMockup" src="img/illustration.png" alt="artwork mockup" />
+            </div>
+
+            <div class="lp_wrap">
+              <img class="lp_disc" src="img/lp_disc.png" alt="lp disc" />
+              <img class="lp_cover" src="img/lp_cover.png" alt="lp cover" />
+            </div>
+
+            <button class="detail_btn" type="button">
+              <img src="img/click.png" alt="detail button" />
+              <span>click</span>
+            </button>
+
+            <div class="photoshop_works">
+              <!-- 위 컴퓨터 목업 -->
+              <img class="photoshop_device" src="img/eventpageC2.png" alt="computer mockup" />
+
+              <!-- 아래 가로 긴 이미지 -->
+              <img class="photoshop_long" src="img/eventpage.png" alt="event page" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- modal -->
+    <div class="art_modal">
+      <div class="modal_bg"></div>
+
+      <div class="modal_content">
+        <button class="modal_close" type="button">×</button>
+        <img id="modalImg" src="img/illustration_modal.png" alt="detail artwork" />
+      </div>
+    </div>
+
+    <!-- copyright -->
+    <footer class="copyright">
+      <p>copyright © 2026 mijokim. All right reserved.</p>
+    </footer>
+
+    <!--  =================================================== -->
+    <!--  ===================== script  ===================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <script>
+      // ===================== header circle =====================
+      const nav = document.querySelector(".sub_nav");
+      const navLinks = document.querySelectorAll(".sub_nav a");
+      const navCircle = document.querySelector(".sub_nav_circle");
+
+      function moveSubCircle(link) {
+        const navRect = nav.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        const x = linkRect.left - navRect.left + linkRect.width / 2;
+
+        navCircle.style.left = `${x}px`;
+      }
+
+      window.addEventListener("load", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec4"]');
+        moveSubCircle(firstLink);
+      });
+
+      window.addEventListener("resize", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec4"]');
+        moveSubCircle(firstLink);
+      });
+
+      // 메인페이지 특정 섹션으로 이동
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const target = link.dataset.target;
+
+          location.href = `../index.html?target=${target}`;
+        });
+      });
+      // ===================== artwork data =====================
+      const artData = {
+        illustration: {
+          logo: "img/illustration_LOGO.png",
+          title: "일러스트 작업물",
+          desc: "“특정 컨셉을 기반으로 색감과 형태를 통해 분위기를 시각화한 일러스트 작업입니다.”",
+          subTitle: "CHARACTER ARTWORK",
+          subDesc: "“강한 색감과 스타일링으로 캐릭터의 개성과 분위기를 표현한 일러스트 작업”",
+          mockup: "img/illustration.png",
+          modal: "img/illustration_modal.png",
+        },
+
+        photoshop: {
+          logo: "img/photoshop_LOGO.png",
+          title: "포토샵 작업물",
+          desc: "“특정 컨셉을 기반으로 이미지와 레이아웃을 구성하여 시각적 흐름을 설계한 포토샵 작업입니다.” ",
+          subTitle: "Maison Margiela Event Page",
+          subDesc: "“브랜드 아이덴티티를 유지하면서 비주얼 중심의 이벤트 배너 페이지를 직접 기획/디자인한 작업”",
+          mockup: "img/eventpage.png",
+          modal: "img/eventpagemodal.jpg",
+        },
+      };
+
+      const typeBtns = document.querySelectorAll(".type_btn");
+      const programLogo = document.querySelector("#programLogo");
+      const artTitle = document.querySelector("#artTitle");
+      const artDesc = document.querySelector("#artDesc");
+      const artSubTitle = document.querySelector("#artSubTitle");
+      const artSubDesc = document.querySelector("#artSubDesc");
+      const artMockup = document.querySelector("#artMockup");
+      const modalImg = document.querySelector("#modalImg");
+
+      let currentType = "illustration";
+
+      function changeArtwork(type) {
+        const data = artData[type];
+        currentType = type;
+
+        typeBtns.forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.type === type);
+        });
+
+        programLogo.src = data.logo;
+        artTitle.textContent = data.title;
+        artDesc.textContent = data.desc;
+        artSubTitle.textContent = data.subTitle;
+        artSubDesc.textContent = data.subDesc;
+        artMockup.src = data.mockup;
+        modalImg.src = data.modal;
+
+        if (type === "photoshop") {
+          document.body.classList.add("photoshop-mode");
+        } else {
+          document.body.classList.remove("photoshop-mode");
+        }
+      }
+
+      typeBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          changeArtwork(btn.dataset.type);
+        });
+      });
+
+      // ===================== modal =====================
+      const detailBtn = document.querySelector(".detail_btn");
+      const modal = document.querySelector(".art_modal");
+      const modalClose = document.querySelector(".modal_close");
+      const modalBg = document.querySelector(".modal_bg");
+
+      detailBtn.addEventListener("click", () => {
+        modalImg.src = artData[currentType].modal;
+        modal.classList.add("show");
+      });
+
+      modalClose.addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+
+      modalBg.addEventListener("click", () => {
+        modal.classList.remove("show");
+      });
+
+      // ===================== URL type =====================
+      const urlParams = new URLSearchParams(window.location.search);
+      const pageType = urlParams.get("type");
+
+      if (pageType === "photoshop") {
+        changeArtwork("photoshop");
+      } else {
+        changeArtwork("illustration");
+      }
+
+      // ===================== sub page circle cursor =====================
+      const subCursor = document.createElement("div");
+      subCursor.className = "sub_cursor";
+      document.body.appendChild(subCursor);
+
+      let subLastTrailTime = 0;
+
+      document.addEventListener("mousemove", function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        subCursor.style.left = x + "px";
+        subCursor.style.top = y + "px";
+
+        const now = Date.now();
+
+        if (now - subLastTrailTime > 55) {
+          const trail = document.createElement("div");
+          trail.className = "sub_cursor_trail";
+          trail.style.left = x + "px";
+          trail.style.top = y + "px";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 1000);
+
+          subLastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", function () {
+        subCursor.classList.add("click");
+      });
+
+      document.addEventListener("mouseup", function () {
+        subCursor.classList.remove("click");
+      });
+    </script>
+  </body>
+</html>

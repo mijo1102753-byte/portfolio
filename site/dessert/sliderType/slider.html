@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <title>슬라이더 영역</title>
+  </head>
+  <body>
+    <section id="sliderType">
+      <h2 class="blind">슬라이더 유형</h2>
+      <!-- Swipper -->
+      <div class="swiper dessert_hero">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slider_img s1">
+              <div class="desc container">
+                <span>dessert cafe</span>
+                <h3>DESSERT TRENDS</h3>
+                <p>카페와 어울리는 세강의 모든 디저트를 만나보세요! 공간의 분위기를 매력적으로 전환시켜 줄거예요!</p>
+                <div class="btn">
+                  <a href="#">자세히 보기</a>
+                  <a href="#" class="brown">사이트보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider_img s2">
+              <div class="desc container">
+                <span>dessert cafe</span>
+                <h3>DESSERT TRENDS</h3>
+                <p>카페와 어울리는 세강의 모든 디저트를 만나보세요! 공간의 분위기를 매력적으로 전환시켜 줄꺼예요!</p>
+                <div class="btn">
+                  <a href="#">자세히 보기</a>
+                  <a href="#" class="brown">사이트보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="slider_img s3">
+              <div class="desc container">
+                <span>dessert cafe</span>
+                <h3>DESSERT TRENDS</h3>
+                <p>카페와 어울리는 세강의 모든 디저트를 만나보세요! 공간의 분위기를 매력적으로 전환시켜 줄꺼예요!</p>
+                <div class="btn">
+                  <a href="#">자세히 보기</a>
+                  <a href="#" class="brown">사이트보기</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".dessert_hero", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>

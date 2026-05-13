@@ -1,0 +1,92 @@
+/* 박스 모델 통일 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* 기본 여백 제거 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+/* 폰트 기본값 */
+body {
+  line-height: 1.5;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #001932;
+}
+/* 리스트 스타일 제거 */
+ul,
+ol,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* 링크 초기화 */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 이미지 반응형 기본 */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  /* max-width: 100%; */
+}
+/* 폼 요소 폰트 통일 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: 0;
+  outline: none;
+  background: none;
+}
+
+/* 버튼 기본 UX */
+button {
+  cursor: pointer;
+}
+
+/* 테이블 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 제목 기본 여백 제거 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* 블라인드 효과 */
+.blind {
+  width: 0;
+  height: 0;
+  line-height: 0;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+}
+
+/* 이미지 대체(ir) 효과 */
+.ir {
+  display: block;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}

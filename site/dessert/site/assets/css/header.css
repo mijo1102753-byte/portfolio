@@ -1,0 +1,48 @@
+.header_inner {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.header_logo {
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.header_logo em {
+  font-size: 18px;
+  font-weight: 400;
+}
+.header_menu {
+  width: 60%;
+}
+.header_menu ul {
+}
+.header_menu ul li {
+  display: inline-block;
+}
+.header_menu ul li a {
+  padding: 13px 30px;
+  margin: 0 5px;
+  border-radius: 10px;
+  transition: background-color 0.33s;
+}
+.header_menu ul li a:hover {
+  background-color: #f1f1f1;
+}
+.header_member {
+  width: 20%;
+  text-align: right;
+}
+.header_member a {
+  border: 1px solid #000;
+  padding: 10px 30px;
+  border-radius: 50px;
+}
+.header_member a:hover {
+  background-color: #f1f1f1;
+}

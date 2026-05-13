@@ -1,0 +1,186 @@
+#footer {
+  width: 100%;
+
+  background: #2b2623;
+  color: #eae6e2;
+  font-family: "Pretendard";
+  padding: 50px 0;
+}
+
+#footer .container {
+  width: 1280px;
+  margin: 0 auto;
+}
+.slogan_top {
+  font-family: "Noto Serif KR", serif;
+  font-size: 24px;
+  line-height: 1.8;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  padding-bottom: 50px;
+}
+.footer_wrap {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 70px 0;
+}
+.footer_info {
+  flex: 2;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+.footer_menu {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+.footer_contact {
+  flex: 1;
+  border-right: 1px solid rgba(255, 255, 255, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_section {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer_bottom {
+  font-family: "Playfair Display", serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 30px;
+}
+
+/* detail */
+/* footer_info detail */
+.brand-name {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+.sub-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 24px;
+}
+.slogan-main {
+  font-family: "Noto Serif KR", serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* footer_menu detail*/
+.footer_section a {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.footer_menu a {
+  color: #fff;
+  font-family: "Playfair Display", serif;
+  font-size: 20px;
+  display: block;
+  margin-bottom: 20px;
+}
+.footer_menu a span {
+  display: block;
+  font-family: "Pretendard";
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+}
+/* footer_contact detail */
+.footer_contact {
+  font-size: 16px;
+  line-height: 3;
+
+  text-align: center;
+}
+.footer_contact .email a {
+  color: #eae6e2;
+}
+
+/* footer_section detail */
+.footer_section {
+  font-family: "Playfair Display", serif;
+}
+.footer_section a {
+  padding-left: 30%;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  margin-bottom: 30px;
+}
+.footer_section a:hover {
+  color: #fff;
+}
+.footer_section i {
+  margin-right: 11px;
+}
+
+/* 미디어 쿼리 */
+@media (max-width: 1300px) {
+  #footer .container {
+    width: 90%;
+  }
+}
+@media (max-width: 980px) {
+  .footer_wrap {
+    flex-direction: column;
+  }
+  .footer_info {
+    display: none;
+  }
+  .footer_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-right: 0 none;
+  }
+  .footer_menu a span {
+    display: none;
+  }
+  .footer_contact {
+    border-right: 0 none;
+    align-items: flex-start;
+  }
+  .footer_section {
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  .footer_section a {
+    padding-left: 0;
+    margin-right: 30px;
+  }
+}
+@media (max-width: 720px) {
+  .footer_wrap {
+    padding: 43px 0;
+  }
+}
+@media (max-width: 400px) {
+  .footer_menu a {
+    font-size: 16px;
+  }
+}
+@media (max-width: 320px) {
+  .footer_menu a {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/Fivicon.png" />
+
+    <link rel="stylesheet" href="../css/common/font.css" />
+    <link rel="stylesheet" href="../css/common/reset.css" />
+    <link rel="stylesheet" href="video.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="subHeader">
+      <div class="sub_header_inner">
+        <h1 class="sub_logo">
+          <a href="../index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </h1>
+
+        <nav class="sub_nav">
+          <span class="sub_nav_circle"></span>
+
+          <a href="../index.html?target=sec3" data-target="sec3" data-name="PROFILE">빛</a>
+          <a href="../index.html?target=sec4" data-target="sec4" data-name="ARTWORK">충돌</a>
+          <a href="../index.html?target=sec5" data-target="sec5" data-name="VIDEO">그림자</a>
+          <a href="../index.html?target=sec6" data-target="sec6" data-name="WEB">인식</a>
+          <a href="../index.html?target=sec7" data-target="sec7" data-name="CONTACT">균형</a>
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <section id="videoPage">
+      <div class="video_circles">
+        <span class="circle circle_big"></span>
+        <span class="circle circle_mid"></span>
+        <span class="circle circle_small"></span>
+      </div>
+      <div class="video_inner">
+        <!-- 상단 -->
+        <p class="video_label">
+          PROGRAM :
+
+          <img src="img/PremierePro_logo.png" alt="Premiere Pro" class="program_icon" />
+          <img src="img/AfterEffects_logo.png" alt="After Effects" class="program_icon" />
+        </p>
+
+        <h2>프리미어 프로 / 애프터 이펙트 작업물</h2>
+
+        <p class="video_desc">“기획부터 구성, 편집까지 전 과정을 직접 설계하여 완성한 영상 작업입니다.”</p>
+
+        <!-- 오른쪽 버튼 -->
+        <div class="video_btns">
+          <button class="video_tab active" data-type="team">
+            TEAM<br />
+            PROJECT
+          </button>
+
+          <button class="video_tab" data-type="solo">
+            SOLO<br />
+            PROJECT
+          </button>
+        </div>
+
+        <!-- 내용 -->
+        <div class="video_content" id="videoContent"></div>
+      </div>
+
+      <div class="solo_scroll_down">
+        <p>Scroll down</p>
+        <span></span>
+      </div>
+    </section>
+
+    <!--  =================================================== -->
+    <!--  ===================== script  ===================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <script>
+      // ===================== header circle =====================
+      const nav = document.querySelector(".sub_nav");
+      const navLinks = document.querySelectorAll(".sub_nav a");
+      const navCircle = document.querySelector(".sub_nav_circle");
+
+      function moveSubCircle(link) {
+        const navRect = nav.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        const x = linkRect.left - navRect.left + linkRect.width / 2;
+
+        navCircle.style.left = `${x}px`;
+      }
+
+      window.addEventListener("load", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec5"]');
+        moveSubCircle(firstLink);
+      });
+
+      window.addEventListener("resize", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec5"]');
+        moveSubCircle(firstLink);
+      });
+
+      // 메인페이지 특정 섹션으로 이동
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const target = link.dataset.target;
+          location.href = `../index.html?target=${target}`;
+        });
+      });
+
+      const videoData = {
+        team: `
+    <div class="video_item">
+    
+      <h3>• TEAM PROJECT</h3>
+
+      <p class="video_text">
+        <strong>보이지 않는 시선아래에서</strong>
+        <span>(2026 / Art Film / 3min)</span><br />
+        감시와 평가 그리고 시선을 주제로, 현실과 비현실의 경계를 표현한 단편 아트 필름입니다.<br />
+        일상적인 인물과 이를 관찰하는 존재를 대비시키며 긴장과 균열을 형성하고,<br />
+        성경적 상징과 반전 구조를 통해 시선의 주체가 뒤바뀌는 서사를 담았습니다.<br />
+        이를 통해 우리는 타인을 판단하고 평가하는 자격이 있는지에 대한 질문을 던집니다.
+      </p>
+     
+
+      <div class="video_mockup">
+        <img src="img/videoTEAM.png" alt="team video mockup" />
+
+        <button class="video_play_btn" data-url="https://youtu.be/meeXmFFVJz0" type="button">
+          <img src="img/VIEWVIDEOCLICK.png" alt="view video" />
+          <span>VIEW<br />VIDEO</span>
+        </button>
+      </div>
+    </div>
+  `,
+
+        solo: `
+    <div class="video_item">
+      <h3>• SOLO PROJECT</h3>
+
+      <p class="video_text">
+        <strong>무명지인(無名之人)</strong>
+        <span>(2026 / Art Film / 3min)</span><br />
+        이름 없는 사람들의 이야기를 담은 영상 작업입니다.<br />
+        각각의 관계의 존재는 다르지만, 같은 시간과 공간을 공유하며 이어집니다.<br />
+        기록되지 않은 삶과 기억을 통해 존재의 의미를 이야기합니다.<br />
+        현재를 살아가고 있는 모든 사람들이 이 이야기의 주인공입니다.
+      </p>
+
+      <div class="video_mockup">
+        <img src="img/videoSOLO1.png" alt="solo video mockup" />
+
+        <button class="video_play_btn" data-url="https://youtu.be/s-hbaPMtBzw" type="button">
+          <img src="img/VIEWVIDEOCLICK.png" alt="view video" />
+          <span>VIEW<br />VIDEO</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="video_item video_item_second">
+      <p class="video_text">
+        <strong>서울 홍보영상</strong>
+        <span>(2026 / Promotional Film / 1min)</span><br />
+        서울의 다양한 도시 풍경과 감성을 담아낸 홍보 영상입니다.<br />
+        도시의 일상과 공간을 시각적으로 구성하여<br />
+        서울만의 분위기와 매력을 전달하고자 제작하였습니다.
+      </p>
+
+      <div class="video_mockup">
+        <img src="img/videoSOLO2.png" alt="seoul video mockup" />
+
+        <button class="video_play_btn" data-url="https://youtu.be/43BioIhRy20" type="button">
+          <img src="img/VIEWVIDEOCLICK.png" alt="view video" />
+          <span>VIEW<br />VIDEO</span>
+        </button>
+      </div>
+    </div>
+  `,
+      };
+
+      const videoTabs = document.querySelectorAll(".video_tab");
+      const videoContent = document.querySelector("#videoContent");
+
+      function changeVideo(type) {
+        videoTabs.forEach((btn) => {
+          btn.classList.toggle("active", btn.dataset.type === type);
+        });
+
+        videoContent.innerHTML = videoData[type];
+
+        document.body.classList.toggle("solo-mode", type === "solo");
+
+        const scrollDown = document.querySelector(".solo_scroll_down");
+        if (scrollDown) {
+          scrollDown.classList.remove("hide");
+        }
+      }
+
+      // 처음 페이지 열면 TEAM PROJECT만 나옴
+      const urlParams = new URLSearchParams(window.location.search);
+      const pageType = urlParams.get("type");
+
+      changeVideo(pageType || "team");
+      // 오른쪽 원 버튼 클릭하면 내용 교체
+      videoTabs.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          changeVideo(btn.dataset.type);
+        });
+      });
+
+      // 반원 버튼 클릭하면 유튜브 이동
+      document.addEventListener("click", (e) => {
+        const playBtn = e.target.closest(".video_play_btn");
+
+        if (!playBtn) return;
+
+        window.open(playBtn.dataset.url, "_blank");
+      });
+
+      // ===================== sub page circle cursor =====================
+      const subCursor = document.createElement("div");
+      subCursor.className = "sub_cursor";
+      document.body.appendChild(subCursor);
+
+      let subLastTrailTime = 0;
+
+      document.addEventListener("mousemove", function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        subCursor.style.left = x + "px";
+        subCursor.style.top = y + "px";
+
+        const now = Date.now();
+
+        if (now - subLastTrailTime > 55) {
+          const trail = document.createElement("div");
+          trail.className = "sub_cursor_trail";
+          trail.style.left = x + "px";
+          trail.style.top = y + "px";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 1000);
+
+          subLastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", function () {
+        subCursor.classList.add("click");
+      });
+
+      document.addEventListener("mouseup", function () {
+        subCursor.classList.remove("click");
+      });
+
+      // window.addEventListener("scroll", () => {
+      //   const scrollDown = document.querySelector(".solo_scroll_down");
+
+      //   if (!scrollDown) return;
+
+      //   if (window.scrollY > 20) {
+      //     scrollDown.classList.add("hide");
+      //   }
+      // });
+      window.addEventListener("scroll", () => {
+        const scrollDown = document.querySelector(".solo_scroll_down");
+
+        if (!scrollDown) return;
+
+        // 맨 위 근처일 때 다시 보이기
+        if (window.scrollY <= 20) {
+          scrollDown.classList.remove("hide");
+        } else {
+          scrollDown.classList.add("hide");
+        }
+      });
+    </script>
+  </body>
+</html>

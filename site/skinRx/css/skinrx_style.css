@@ -1,0 +1,516 @@
+/* layout */
+#gnb {
+  width: 100%;
+  height: 32px;
+  background-color: black;
+}
+#header {
+  width: 100%;
+  height: 109px;
+  /* background-color: beige; */
+}
+#nav {
+}
+#main {
+}
+#footer {
+}
+
+/* container */
+.container {
+  width: 944px;
+  margin: 0 auto;
+  /* background: rgba(255, 186, 186, 0.5); */
+}
+
+/* gnb */
+#gnb > .container {
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#gnb h6 {
+  font-size: 0.8em;
+}
+#gnb h6 a {
+  color: #fff;
+}
+#gnb h6 a:hover {
+  color: #7c1212;
+}
+#gnb ul {
+  display: flex;
+}
+#gnb ul li {
+  padding: 0 9px;
+}
+#gnb ul li a {
+  font-size: 0.85em;
+  color: #fff;
+}
+#gnb ul li a:hover {
+  color: #7c1212;
+}
+/* 이미지를 표현하는 방법 
+  1) HTML태그를 통해 표현한는 방법 ex) <img src="" alt=""
+   - 중요한 이미지를 표현할때, 배너 등등
+  2) CSS속성값으로 통해 표현하는 방법 ex) {background:....}
+  3) 이미지 스프라이트 방법 : 아이콘 종류에 많이 쓰인다
+*/
+
+/* 아이콘 */
+#gnb h6 span {
+  display: inline-block;
+  width: 15px;
+  height: 10px;
+  background-color: yellow;
+  background: url(../img/icons.png) -350px 2px;
+  margin-left: 3px;
+}
+#gnb ul li span {
+  width: 15px;
+  height: 10px;
+  display: inline-block;
+  background: url(../img/icons.png) 0 0;
+  margin-left: 5px;
+}
+#gnb ul li:nth-child(3) span {
+  background-position: -299px 2px;
+}
+#gnb ul li:nth-child(4) span {
+  background-position: -200px 2px;
+}
+#gnb ul li:nth-child(6) span {
+  background-position: -250px 2px;
+}
+
+/* header */
+.header_inner {
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+ul.menu {
+  display: flex;
+}
+ul.menu li {
+}
+ul.menu li a {
+  display: block;
+  padding: 0 11px;
+  font-size: 13px;
+  font-weight: bold;
+  position: relative;
+  /* 절대좌표의 기준점 */
+}
+/* 가상요소, css에서 문자를 넣을수 있다 */
+ul.menu li a.bar::after {
+  /* display: inline-block; */
+  content: "";
+  width: 1px;
+  height: 11px;
+  background: #333;
+  position: absolute;
+  top: 2;
+  right: 0;
+}
+ul.menu li a:hover {
+  color: #be7878;
+}
+ul.menu li:first-child a {
+  padding-left: 0;
+}
+h1.logo {
+  font-family: "Lora", serif;
+  font-size: 4em;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+h1.logo a {
+  color: #1d1d1d;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+h1.logo a span {
+  font-weight: 300;
+  color: #b3b3b3;
+}
+
+.search_box {
+  display: flex;
+  border: 1px solid #000;
+}
+.search_box input {
+  width: 164px;
+  height: 36px;
+  padding-left: 10px;
+}
+.search_box button {
+  width: 36px;
+  height: 36px;
+  background: url(../img/lip.png) no-repeat center;
+  background-size: 80%;
+  cursor: pointer;
+}
+
+/* nav */
+#nav ul {
+  display: flex;
+  justify-content: space-around;
+  height: 56px;
+  align-items: center;
+  border-top: 5px solid #000;
+}
+#nav ul li {
+  /* padding: 20px 0; */
+}
+#nav ul li a {
+  display: block;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1em;
+  font-weight: 700;
+  color: #000;
+}
+#nav ul li a:hover {
+  color: #590094;
+}
+
+/************** main ****************/
+
+/* main_banner */
+/* grid 레이아웃 */
+.main_banner {
+  /* display: flex;
+  flex-wrap: wrap; */
+
+  /* display: grid;
+  grid-template-columns: 624px 304px;
+  grid-template-rows: 304px 136px;
+  grid-template-areas:
+    "rolling feature"
+    "rolling event";
+  gap: 16px; */
+}
+.rolling_banner {
+  /* width: 624px;
+  height: 456px; */
+  /* background-color: #590094; */
+
+  /* grid-area: rolling; */
+}
+.feature_item {
+  /* width: 304px;
+  height: 304px; */
+  /* background-color: #7c1212; */
+
+  /* grid-area: feature;
+  border: 1px solid #9d9d9d; */
+}
+
+.main_banner {
+  display: flex;
+  gap: 16px;
+}
+.feature_item {
+  width: 304px;
+  height: 304px;
+  margin-bottom: 16px;
+}
+
+.main_event {
+  width: 304px;
+  height: 136px;
+  /* grid-area: event; */
+  background: url(../img/main_event.png);
+}
+
+.feature_item figcaption {
+  font-size: 2em;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  padding-top: 10px;
+}
+.feature_item figure.feature_img {
+  text-align: center;
+}
+
+/* item_txt */
+.item_txt {
+}
+.item_txt ul {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.item_txt ul li {
+  margin-bottom: 3px;
+  /* 한줄 글자 생략 삼총사 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.item_txt ul li:first-child {
+  font-weight: 800;
+  color: #191919;
+}
+.item_txt ul li:nth-child(2) {
+  color: #9d9d9d;
+}
+.item_txt ul li span.money {
+  color: #191919;
+  font-weight: 800;
+  margin-right: 8px;
+}
+.item_txt ul li span.cancle {
+  color: #9d9d9d;
+  text-decoration: line-through;
+}
+
+/* title 시작 - 메인 안에 섹션별로 사용 */
+.title {
+  height: 46px;
+  border-top: 3px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.title h2 {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2em;
+  letter-spacing: 5px;
+  color: #181818;
+}
+/* title 끝 */
+
+/* special_picks */
+.special_picks {
+  margin-top: 50px;
+}
+.pick_menu {
+  border-top: 2px dotted #000;
+}
+.pick_menu ul {
+  display: flex;
+  justify-content: center;
+  border-top: 2px dotted #000;
+}
+.pick_menu ul li {
+  padding: 0 15px;
+}
+.pick_menu ul li a {
+  display: block;
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+.pick_menu ul li a:hover {
+  border-top: 4px solid #000;
+  /* position: relative;
+  top: -4px; */
+  margin-top: -4px;
+  color: #d1a4a4;
+}
+
+/* 삼각형 만들기 - 가상요소 , 보더의 성질 이용 */
+.triangle::after {
+  content: "";
+  border-top: 5px solid #000;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid transparent;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.pick_menu ul li a:hover .triangle::after {
+  opacity: 1;
+}
+
+.pick_box {
+  display: flex;
+  /* flex-wrap: wrap; */
+}
+.pick {
+  width: 25%;
+  /* border: 1px solid #000;
+  box-sizing: border-box; */
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+}
+.pick .pick_img {
+  padding: 15px 0;
+}
+.pick_icon {
+  width: 30px;
+  height: 16px;
+  background: url(../img/icons.png) no-repeat 0 0;
+  margin: 0 auto;
+}
+.icon02 {
+  width: 48px;
+  background-position: -50px 0;
+}
+.icon04 {
+  background-position: -150px 0;
+}
+
+/* magazine */
+.magazine {
+  margin-top: 50px;
+}
+
+/* brand_focus */
+.brand_focus {
+  margin-top: 50px;
+}
+.product_box {
+  display: flex;
+  justify-content: space-between;
+}
+.product_box img {
+  width: 100%;
+}
+/* best_contents */
+.best_contents {
+  margin-top: 50px;
+}
+.best_inner {
+  display: flex;
+}
+.best_menu {
+  width: 176px;
+}
+.best_menu ul {
+}
+.best_menu ul li {
+}
+.best_menu ul li a {
+  display: block;
+  width: 176px;
+  height: 72px;
+}
+
+.best_menu ul li:nth-child(1) a {
+  background: url(../img/best_menu01.jpg);
+}
+.best_menu ul li:nth-child(1) a:hover {
+  background: url(../img/best_menu01_r.jpg);
+}
+.best_menu ul li:nth-child(2) a {
+  background: url(../img/best_menu02.jpg);
+}
+.best_menu ul li:nth-child(2) a:hover {
+  background: url(../img/best_menu02_r.jpg);
+}
+.best_menu ul li:nth-child(3) a {
+  background: url(../img/best_menu03.jpg);
+}
+.best_menu ul li:nth-child(3) a:hover {
+  background: url(../img/best_menu03_r.jpg);
+}
+.best_menu ul li:nth-child(4) a {
+  background: url(../img/best_menu04.jpg);
+}
+.best_menu ul li:nth-child(4) a:hover {
+  background: url(../img/best_menu04_r.jpg);
+}
+
+.best_iframe {
+  width: 768px;
+  height: 288px;
+}
+
+/* tab_box */
+.tab_box {
+  margin-top: 50px;
+}
+.seller_box {
+  display: flex;
+  justify-content: space-evenly;
+}
+.seller_box a {
+  filter: invert(100%);
+  transition: filter 0.5s;
+}
+.seller_box a:hover {
+  filter: invert(0%);
+}
+
+/*************** footer *****************/
+.footer_inner {
+  display: flex;
+  margin-top: 100px;
+  border-top: 5px solid #000;
+  padding: 30px 0;
+}
+.footer_inner > div {
+  /* width: 33.333%;
+     box-sizing:border-box;*/
+  flex: 1;
+  padding: 0 15px;
+  height: 86px;
+}
+.footer_inner > div ul {
+  border-right: 1px dotted #5d5d5d;
+  height: inherit;
+}
+.footer_inner > div ul.outlet {
+  background-repeat: 0;
+  border-bottom: 1px dotted #000;
+  border-right: 0;
+  margin-bottom: 5px;
+  height: 38px;
+}
+
+.footer_inner .contents01 ul li {
+  margin-bottom: 3px;
+}
+.contents01 ul li:nth-child(1) {
+  font-size: 1.2em;
+  font-weight: 800;
+  color: #000;
+}
+.contents01 ul li:nth-child(2) {
+  font-size: 1.7em;
+  font-weight: bold;
+  color: #000;
+}
+
+.footer_inner .contents02 {
+}
+.contents02 ul {
+}
+.footer_inner .contents02 ul li {
+  margin-bottom: 7px;
+}
+.contents02 ul li:nth-child(1) {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+}
+
+.contents03 {
+}
+.contents03 ul {
+}
+.footer_inner .contents03 ul li {
+  margin-bottom: 5px;
+}
+.contents03 ul li:nth-child(1) {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+.contents03 ul li:nth-child(3) {
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}

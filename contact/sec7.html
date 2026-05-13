@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>contact</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/Fivicon.png" />
+
+    <link rel="stylesheet" href="sec7.css" />
+  </head>
+  <body>
+    <!-- ===================== header ===================== -->
+    <!-- header -->
+    <header id="subHeader">
+      <div class="sub_header_inner">
+        <h1 class="sub_logo">
+          <a href="../index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </h1>
+
+        <nav class="sub_nav">
+          <span class="sub_nav_circle"></span>
+
+          <a href="../index.html?target=sec3" data-target="sec3" data-name="PROFILE">빛</a>
+          <a href="../index.html?target=sec4" data-target="sec4" data-name="ARTWORK">충돌</a>
+          <a href="../index.html?target=sec5" data-target="sec5" data-name="VIDEO">그림자</a>
+          <a href="../index.html?target=sec6" data-target="sec6" data-name="WEB">인식</a>
+          <a href="../index.html?target=sec7" data-target="sec7" data-name="CONTACT">균형</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ===================== section7 ===================== -->
+    <section id="sec7">
+      <div class="sec7_bg"></div>
+
+      <h2 class="sec7_title">CONTACT</h2>
+
+      <div class="seesaw_wrap">
+        <!-- 왼쪽 원 -->
+        <div class="contact_circle left_circle">
+          <p class="thanks_text">
+            <span class="eng"> “Thank you for your time.” </span>
+
+            <span class="kor"> “시간 내주셔서 감사합니다.” </span>
+          </p>
+        </div>
+
+        <!-- 오른쪽 원 -->
+        <div class="contact_circle right_circle">
+          <ul>
+            <li>
+              <img src="img/contact_instagram.png" alt="instagram" />
+              <p>kim.mi.jo</p>
+            </li>
+
+            <li>
+              <img src="img/contact_mail.png" alt="mail" />
+              <p>alwh1102@naver.com</p>
+            </li>
+
+            <li>
+              <img src="img/contact_phone.png" alt="phone" />
+              <p>010.6690.6463</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 시소 -->
+        <div class="seesaw">
+          <div class="seesaw_bar">
+            <p>“I’d love to work with you. Feel free to contact me.”</p>
+          </div>
+
+          <div class="seesaw_triangle"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- copyright -->
+    <footer class="copyright">
+      <p>copyright © 2026 mijokim. All right reserved.</p>
+    </footer>
+
+    <!--  =================================================== -->
+    <!--  ===================== script  ===================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <script>
+      // ===================== header circle =====================
+      const nav = document.querySelector(".sub_nav");
+      const navLinks = document.querySelectorAll(".sub_nav a");
+      const navCircle = document.querySelector(".sub_nav_circle");
+
+      function moveSubCircle(link) {
+        const navRect = nav.getBoundingClientRect();
+        const linkRect = link.getBoundingClientRect();
+
+        const x = linkRect.left - navRect.left + linkRect.width / 2;
+
+        navCircle.style.left = `${x}px`;
+      }
+
+      window.addEventListener("load", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec7"]');
+        moveSubCircle(firstLink);
+      });
+
+      window.addEventListener("resize", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec7"]');
+        moveSubCircle(firstLink);
+      });
+
+      // 메인페이지 특정 섹션으로 이동
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const target = link.dataset.target;
+
+          location.href = `../index.html?target=${target}`;
+        });
+      });
+
+      // ===================== section7 시소 =====================
+
+      // 시작 상태
+      gsap.set(".seesaw", {
+        rotation: 6,
+      });
+
+      gsap.set(".left_circle", {
+        x: 100,
+        y: -20,
+        rotation: 8,
+      });
+
+      gsap.set(".right_circle", {
+        x: 100,
+        y: 50,
+        rotation: 8,
+      });
+
+      // 페이지 열리자마자 실행
+      const seesawTl = gsap.timeline({
+        delay: 0.3,
+      });
+
+      seesawTl.to(".seesaw", {
+        rotation: 0,
+        duration: 1,
+        ease: "sine.inOut",
+      });
+
+      seesawTl.to(
+        ".left_circle",
+        {
+          x: 0,
+          y: 0,
+          rotation: 0,
+          duration: 1,
+          ease: "sine.inOut",
+        },
+        "<",
+      );
+
+      seesawTl.to(
+        ".right_circle",
+        {
+          x: 0,
+          y: 0,
+          rotation: 0,
+          duration: 1,
+          ease: "sine.inOut",
+        },
+        "<",
+      );
+      // ===================== header menu click move =====================
+      const moveState = {
+        sec3: {
+          bottom: ["#sec3"],
+        },
+        sec4: {
+          bottom: ["#sec3", "#sec4"],
+        },
+        sec5: {
+          bottom: ["#sec3", "#sec4", "#sec5"],
+        },
+        sec6: {
+          bottom: ["#sec3", "#sec4", "#sec5", "#sec6"],
+        },
+        sec7: {
+          bottom: ["#sec3", "#sec4", "#sec5", "#sec6", "#sec7"],
+        },
+      };
+
+      // ===================== sub page circle cursor =====================
+      const subCursor = document.createElement("div");
+      subCursor.className = "sub_cursor";
+      document.body.appendChild(subCursor);
+
+      let subLastTrailTime = 0;
+
+      document.addEventListener("mousemove", function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        subCursor.style.left = x + "px";
+        subCursor.style.top = y + "px";
+
+        const now = Date.now();
+
+        if (now - subLastTrailTime > 55) {
+          const trail = document.createElement("div");
+          trail.className = "sub_cursor_trail";
+          trail.style.left = x + "px";
+          trail.style.top = y + "px";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 1000);
+
+          subLastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", function () {
+        subCursor.classList.add("click");
+      });
+
+      document.addEventListener("mouseup", function () {
+        subCursor.classList.remove("click");
+      });
+    </script>
+  </body>
+</html>

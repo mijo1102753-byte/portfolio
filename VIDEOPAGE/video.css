@@ -1,0 +1,630 @@
+/* ===================== sub header ===================== */
+#subHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 58px;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+}
+
+.sub_header_inner {
+  width: 100%;
+  height: 100%;
+  padding: 0 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub_logo img {
+  width: 58px;
+  display: block;
+}
+
+.sub_nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.sub_nav a {
+  position: relative;
+  z-index: 2;
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.sub_nav a::after {
+  content: attr(data-name);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  color: #000;
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.sub_nav a:hover {
+  color: transparent;
+}
+
+.sub_nav a:hover::after {
+  opacity: 1;
+}
+
+.sub_nav_circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 38px;
+  height: 38px;
+  border: 1px solid #ffffff44;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* cursor */
+body {
+  cursor: none;
+}
+
+a,
+button {
+  cursor: none;
+}
+
+/* 중심 원 */
+.sub_cursor {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 20px;
+  height: 20px;
+
+  background: rgba(255, 255, 255, 0.473);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2147483647;
+}
+
+/* 퍼지는 원 */
+.sub_cursor_trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.486);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2147483646;
+
+  animation: subCursorPulse 1s ease-out forwards;
+}
+
+@keyframes subCursorPulse {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.8);
+  }
+}
+
+/* 클릭 */
+.sub_cursor.click {
+  width: 34px;
+  height: 34px;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== video page ===================== */
+
+#videoPage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #000;
+  color: #fff;
+  overflow: hidden;
+  padding: 120px 0 0 0;
+}
+
+.video_inner {
+  position: relative;
+  z-index: 3;
+  width: 1400px;
+  margin: 0 auto;
+}
+
+/* 오른쪽 아래 겹친 원 */
+
+.video_circles {
+  /* position: absolute;
+  right: -240px;
+  bottom: -240px;
+  width: 860px;
+  height: 860px;
+  z-index: 1;
+  pointer-events: none; */
+  position: fixed;
+  right: -300px;
+  bottom: -380px;
+
+  width: 860px;
+  height: 860px;
+
+  z-index: 1;
+  pointer-events: none;
+
+  animation: circleWrapFloat 6s ease-in-out infinite;
+}
+
+.video_circles .circle {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle_big {
+  width: 860px;
+  height: 860px;
+  right: 0;
+  bottom: 0;
+  background: #111;
+}
+
+.circle_mid {
+  width: 630px;
+  height: 630px;
+  right: 100px;
+  bottom: 100px;
+  background: #1b1b1b;
+}
+
+.circle_small {
+  width: 440px;
+  height: 440px;
+  right: 185px;
+  bottom: 185px;
+  background: #252525;
+}
+
+/* 상단 */
+
+.video_label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  font-family: "Roboto Serif", serif;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.program_icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+#videoPage h2 {
+  font-family: "Pretendard", sans-serif;
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 14px;
+}
+
+.video_desc {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 90px;
+}
+
+/* 오른쪽 원 버튼 */
+
+.video_btns {
+  position: absolute;
+  right: 90px;
+  top: -10px;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+/* 원 버튼 */
+.video_tab {
+  width: 95px;
+  height: 95px;
+
+  border-radius: 50%;
+  border: 2px solid #9a9a9a;
+
+  background: rgba(255, 255, 255, 0.432);
+  color: #000;
+
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  line-height: 1.25;
+
+  cursor: pointer;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.35s ease;
+}
+
+/* hover */
+.video_tab:hover {
+  transform: scale(1.05);
+}
+
+/* 클릭된 상태 */
+.video_tab.active {
+  background: #000;
+  color: #fff;
+  border-color: #ffffff63;
+}
+
+.video_tab.active {
+  background: rgba(54, 53, 53, 0.329);
+  color: #fff;
+  z-index: 2;
+}
+
+/* 내용 */
+
+.video_content {
+  width: 780px;
+}
+
+.video_item {
+  margin-bottom: 120px;
+}
+
+.video_item h3 {
+  font-family: "Roboto Serif", serif;
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+
+.video_text {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  line-height: 1.75;
+  color: #fff;
+  margin-bottom: 65px;
+  margin: 15px 0 65px 0;
+}
+
+.video_text strong {
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 15px;
+}
+
+.video_text span {
+  font-size: 20px;
+}
+
+.video_item h3 {
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* 컴퓨터 목업 */
+
+.video_mockup {
+  position: relative;
+  width: 575px;
+}
+
+.video_mockup img {
+  width: 100%;
+  display: block;
+}
+
+/* 반원 클릭 버튼 */
+
+.video_play_btn {
+  position: absolute;
+  left: 42%;
+  top: 37%;
+  transform: translate(-50%, -50%);
+  width: 90px;
+  height: 90px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  z-index: 30;
+  animation: clickGlow 1.8s ease-in-out infinite;
+}
+
+.video_play_btn img {
+  width: auto;
+  height: auto;
+  display: block;
+  animation: clickFloat 1.8s ease-in-out infinite;
+}
+
+.video_play_btn span {
+  position: absolute;
+  left: 95%;
+  top: 66%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  color: #000;
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.1;
+  text-align: center;
+  pointer-events: none;
+  animation: clickTextGlow 1.8s ease-in-out infinite;
+}
+
+/* 클릭 버튼 반짝 */
+
+@keyframes clickGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.55));
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: drop-shadow(0 0 0px rgba(255, 255, 255, 0));
+  }
+}
+
+@keyframes clickFloat {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes clickTextGlow {
+  0% {
+    opacity: 0.75;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+
+  50% {
+    opacity: 1;
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.9),
+      0 0 14px rgba(255, 255, 255, 0.7);
+  }
+
+  100% {
+    opacity: 0.75;
+    text-shadow: 0 0 0px rgba(255, 255, 255, 0);
+  }
+}
+
+/* ===================== 오른쪽 원 팡팡 애니메이션 ===================== */
+
+.video_circles {
+  animation: circleWrapFloat 6s ease-in-out infinite;
+}
+
+.circle_big {
+  animation: softPopBig 4.8s ease-in-out infinite;
+}
+
+.circle_mid {
+  animation: softPopMid 4.8s ease-in-out infinite 0.35s;
+}
+
+.circle_small {
+  animation: softPopSmall 4.8s ease-in-out infinite 0.7s;
+}
+
+/* 전체 원이 아주 살짝 떠다니는 느낌 */
+@keyframes circleWrapFloat {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-18px, -14px);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* 제일 큰 원 */
+@keyframes softPopBig {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  45% {
+    transform: scale(1.045);
+    opacity: 0.92;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 중간 원 */
+@keyframes softPopMid {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  45% {
+    transform: scale(1.07);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 작은 원 */
+@keyframes softPopSmall {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  45% {
+    transform: scale(1.095);
+    opacity: 0.88;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ===================== copyright ===================== */
+.copyright {
+  position: absolute;
+  left: 50%;
+  bottom: -997px;
+
+  transform: translateX(-50%);
+
+  z-index: 50;
+}
+
+.copyright p {
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.63);
+
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* ===================== solo scroll down ===================== */
+.solo_scroll_down {
+  position: fixed;
+  left: 58%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  display: none;
+  flex-direction: column;
+  align-items: center;
+
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+}
+
+body.solo-mode .solo_scroll_down {
+  display: flex;
+}
+
+.solo_scroll_down.hide {
+  opacity: 0;
+}
+
+.solo_scroll_down p {
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+  color: #ffffff91;
+  margin-bottom: 10px;
+}
+
+.solo_scroll_down span {
+  position: relative;
+  width: 90px;
+  height: 45px;
+  display: block;
+  animation: soloArrowMove 1.2s ease-in-out infinite;
+}
+
+.solo_scroll_down span::before,
+.solo_scroll_down span::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  width: 56px;
+  height: 3px;
+  background: #ffffff91;
+  border-radius: 10px;
+}
+
+.solo_scroll_down span::before {
+  left: 50%;
+  transform-origin: right center;
+  transform: translateX(-100%) rotate(38deg);
+}
+
+.solo_scroll_down span::after {
+  left: 50%;
+  transform-origin: left center;
+  transform: rotate(-38deg);
+}
+
+@keyframes soloArrowMove {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+}

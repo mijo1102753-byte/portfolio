@@ -1,0 +1,1368 @@
+/* ===================== 공통 ===================== */
+body.page-loading {
+  opacity: 0;
+}
+
+body.page-jumping {
+  opacity: 0;
+}
+body {
+  cursor: none;
+}
+
+.cursor_diamond {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.582);
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+  z-index: 2147483647;
+}
+
+.cursor_trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  transform: translate(-50%, -50%) rotate(45deg);
+  pointer-events: none;
+  z-index: 2147483646;
+  animation: diamondPulse 0.9s ease-out forwards;
+}
+
+@keyframes diamondPulse {
+  0% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) rotate(45deg) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(4);
+  }
+}
+
+.cursor_diamond.click {
+  width: 38px;
+  height: 38px;
+}
+#hero,
+#sec1 {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===================== hero ===================== */
+#hero {
+  background: transparent;
+}
+
+/* 배경 (핵심) */
+.hero_bg {
+  position: fixed;
+  inset: 0;
+  background: url("../img/hero_bg.png") no-repeat center / cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* hero 텍스트 */
+.hero_text {
+  position: absolute;
+  z-index: 5;
+  font-family: "Roboto Mono", monospace;
+  font-size: 20px;
+  line-height: 0.95;
+  letter-spacing: 1px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.hero_text p {
+  margin: 0;
+}
+
+.hero_text small {
+  font-size: 9px;
+  margin: 0 10px;
+}
+
+.text_31 {
+  left: 80px;
+  top: 58px;
+}
+
+.text_31 span {
+  margin-left: 95px;
+}
+
+.text_05 {
+  left: 255px;
+  top: 100px;
+}
+
+.text_09 {
+  left: 55px;
+  bottom: 150px;
+}
+
+.text_09 span {
+  margin-left: 230px;
+}
+
+.text_20 {
+  left: 80px;
+  bottom: 70px;
+}
+
+.text_right {
+  right: 156px;
+  bottom: 224px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.black_txt {
+  color: #000;
+}
+
+/* 박스*/
+.date_box {
+  position: absolute;
+  z-index: 6;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  width: 200px;
+  height: 30px;
+}
+
+.box31 {
+  left: 80px;
+  top: 61px;
+}
+
+.box05 {
+  left: 255px;
+  top: 102px;
+}
+
+.box09 {
+  left: 55px;
+  bottom: 150px;
+}
+
+.box20 {
+  left: 80px;
+  bottom: 72px;
+}
+
+/*원형 텍스트*/
+.circle_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 700px;
+  height: 700px;
+  transform: translate(-50%, -50%);
+  z-index: 8;
+  pointer-events: none;
+}
+
+.circle_svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.circle_svg text {
+  font-family: "Roboto Mono", monospace;
+  font-size: 38px;
+  letter-spacing: 8px;
+  fill: currentColor;
+}
+
+.white_circle {
+  color: #000;
+}
+
+.black_circle {
+  color: #fff;
+  transform: rotate(35deg);
+}
+
+/* 한글 텍스트 */
+.hero_kor {
+  position: absolute;
+  left: 60%;
+  bottom: 1px;
+  transform: translateX(-50%);
+  z-index: 9;
+  width: 1000px;
+  font-family: "Pretendard", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.7;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.78);
+  text-align: center;
+  word-break: keep-all;
+}
+
+.hero_kor p {
+  margin: 0;
+}
+
+.hero_text,
+.date_box,
+.circle_wrap,
+.hero_kor {
+  position: absolute;
+}
+
+.hero_text {
+  z-index: 5;
+}
+.date_box {
+  z-index: 6;
+}
+.circle_wrap {
+  z-index: 8;
+}
+.hero_kor {
+  z-index: 9;
+}
+
+#sec1 {
+  z-index: 2;
+}
+
+.sec1_title,
+.sec1_box {
+  z-index: 3;
+}
+
+/* ===================== section1 ===================== */
+#sec1 {
+  z-index: 2;
+}
+
+.sec1_title {
+  position: absolute;
+  right: 200px;
+  top: 90px;
+  z-index: 3;
+  font-family: "Roboto Serif", serif;
+  font-size: 80px;
+  color: #000;
+}
+
+#typing {
+  letter-spacing: -0.02em;
+  word-spacing: 0;
+}
+
+#typing .char {
+  letter-spacing: 0;
+}
+
+#typing .eng {
+  font-family: "Roboto Serif", serif;
+  letter-spacing: 0.01em;
+}
+
+.sec1_box h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  font-family: "Pretendard", sans-serif;
+}
+
+.sec1_box h3 .eng {
+  font-family: "Roboto Serif", serif;
+}
+
+.sec1_box {
+  position: absolute;
+  left: 50%;
+  top: 58%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  /* width: 613px; */
+  padding: 55px 70px;
+
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(6px);
+
+  text-align: center;
+  font-family: "Pretendard", sans-serif;
+  color: #111;
+}
+
+.sec1_box h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.sec1_box p {
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+/* ===================== section2 ===================== */
+#sec2 {
+  width: 100%;
+
+  position: relative;
+  z-index: 20;
+}
+
+.sec2_stage {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+}
+
+/* .sec2_stack {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100vw;
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+.sec2_stack img {
+  display: block;
+} */
+.sec2_card {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.18);
+}
+
+.sec2_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 첫 번째 카드 */
+.card1 {
+  z-index: 6;
+}
+
+/* 뒤 5장은 일단 안 보이게 */
+.card2,
+.card3,
+.card4,
+.card5,
+.card6 {
+  opacity: 0;
+}
+
+.card2 {
+  z-index: 5;
+  transform: translate(8px, 8px);
+}
+.card3 {
+  z-index: 4;
+  transform: translate(16px, 16px);
+}
+.card4 {
+  z-index: 3;
+  transform: translate(24px, 24px);
+}
+.card5 {
+  z-index: 2;
+  transform: translate(32px, 32px);
+}
+.card6 {
+  z-index: 1;
+  transform: translate(40px, 40px);
+}
+
+/*카드 섹션 */
+
+.card-section {
+}
+
+.card-wrap {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  perspective: 1400px; /* 입체감 핵심 */
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: absolute; /* 겹치기 */
+
+  transform-style: preserve-3d;
+}
+.card a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card img {
+  width: 100%;
+  transition: transform 0.45s ease;
+}
+.card:hover img {
+  transform: scale(1.08);
+}
+.card p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 20px;
+  color: #fff;
+  opacity: 0;
+  margin-top: 10px;
+}
+
+/* ===================== section3 ===================== */
+#sec3 {
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  overflow: hidden;
+}
+
+/* 전체 배경 */
+.sec3_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/sec3_bg.png") no-repeat center / cover;
+  z-index: 1;
+}
+
+/* 프로필 전체 박스 */
+.sec3_inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1500px;
+  height: 750px;
+  padding: 28px 12px 35px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+/* 박스 이미지 */
+.sec3_box_img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.sec3_box_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 글들은 무조건 박스 이미지 위 */
+.profile_top,
+.profile_bottom {
+  position: relative;
+  z-index: 5;
+}
+
+/* 상단 */
+.profile_top {
+  width: 100%;
+  height: 190px;
+  margin-bottom: 10px;
+}
+
+/* 눈 이미지 */
+/* .profile_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 285px;
+  height: auto;
+  z-index: 6;
+}
+
+.profile_img img {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+.profile_img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  z-index: 6;
+}
+
+.profile_img img {
+  width: auto;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  display: block;
+  object-fit: initial;
+}
+
+/* 이름/소개 */
+.profile_info {
+  position: absolute;
+  left: 405px;
+  top: 0;
+  z-index: 6;
+  font-family: "Pretendard", sans-serif;
+  color: #111;
+}
+
+.profile_name {
+  position: relative;
+  left: 125%;
+  text-align: center;
+}
+
+.profile_info .eng {
+  font-family: "Roboto Serif", serif;
+  font-size: 36px;
+  margin-bottom: 18px;
+}
+
+.profile_info .kor {
+  font-size: 33px;
+  font-weight: 300;
+  margin-bottom: 4px;
+}
+
+.profile_info .birth {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 28px;
+}
+
+.profile_info .desc {
+  position: absolute;
+  left: -405px;
+  top: 190px;
+  width: 1000px;
+  font-size: 25px;
+  line-height: 1.45;
+  font-weight: 400;
+}
+.profile_info .desc p {
+  /* width: 0;
+  overflow: hidden; */
+  white-space: nowrap;
+}
+/* 커서 */
+.typing_cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: #111;
+  margin-left: 4px;
+  vertical-align: middle;
+}
+
+/* PROFILE */
+.profile_info h2 {
+  position: absolute;
+  left: 680px;
+  top: -65px;
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 300;
+  line-height: 1;
+  color: #000;
+  white-space: nowrap;
+}
+
+/* 하단 */
+.profile_bottom {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr 0.7fr 0.75fr;
+  gap: 196px;
+  width: 100%;
+  padding: 210px 60px;
+}
+
+.profile_bottom .col h3 {
+  font-family: "Roboto Serif", serif;
+  font-size: 25px;
+  font-weight: 400;
+  margin-bottom: 14px;
+  color: #111;
+}
+
+.profile_bottom .col p {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  line-height: 1.45;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.profile_bottom .col p.date {
+  color: #796868;
+  letter-spacing: 0.02em;
+}
+.profile_bottom .col p.academy_text {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+/* 스킬 */
+.skill_icons {
+  display: grid;
+  grid-template-columns: repeat(2, 32px);
+  gap: 16px 23px;
+}
+
+.skill_icons img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.skill_icons .html_logo,
+.skill_icons .css_logo {
+  width: 32px;
+  height: 40px;
+  object-fit: contain;
+}
+
+/* ===================== section4 ===================== */
+#sec4 {
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+  width: 100%;
+  height: 100vh;
+  z-index: 110;
+  overflow: hidden;
+}
+
+/* 배경 */
+.sec4_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/sec4_bg.png") no-repeat center / cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ARTWORK */
+.sec4_title {
+  position: absolute;
+  right: 46px;
+  top: 40px;
+  z-index: 3;
+
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 300;
+  color: #000;
+}
+
+/* 원 전체 */
+.art_circle_wrap {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 원 */
+.art_circle {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    color 0.35s ease;
+}
+
+/* 왼쪽 원 */
+.circle_illust {
+  background: rgba(255, 255, 255, 0.55);
+  color: #000;
+}
+
+/* 오른쪽 원 */
+.circle_photo {
+  margin-left: -35px;
+  background: rgba(60, 55, 45, 0.58);
+  color: #fff;
+}
+
+/* 원 안 글씨 */
+.art_circle span {
+  font-family: "Roboto Serif", serif;
+  font-size: 22px;
+  position: relative;
+  z-index: 2;
+}
+
+/* hover 공통 */
+.art_circle:hover {
+  transform: scale(1.08);
+}
+
+/* 흰 원 hover → 검정 원 + 흰 글씨 */
+.circle_illust:hover {
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+}
+
+/* 검정 원 hover → 흰 원 + 검정 글씨 */
+.circle_photo:hover {
+  background: rgba(255, 255, 255, 0.72);
+  color: #000;
+}
+
+/* 클릭감 */
+.art_circle:active {
+  transform: scale(1.03);
+}
+
+/* ===================== section5 ===================== */
+#sec5 {
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #000;
+  z-index: 120;
+
+  overflow: hidden;
+}
+
+/* 내부 */
+.sec5_inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* 타이틀 */
+.sec5_title {
+  position: absolute;
+  right: 136px;
+  top: 37px;
+  z-index: 5;
+
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.film_wrap {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  transform: translate(-50%, -50%);
+
+  width: 1250px;
+  height: 560px;
+
+  z-index: 3;
+}
+
+/* 필름 PNG */
+.film_frame {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+  pointer-events: none;
+  z-index: 5;
+}
+
+/* 영상 영역  */
+.video_grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+/* 공통 */
+.video_item {
+  position: absolute;
+  overflow: hidden;
+  display: block;
+
+  background: #111;
+}
+
+/* 이미지 */
+.video_thumb {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video_thumb img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+
+  transition: transform 0.45s ease;
+}
+
+/* 1줄 */
+.video_item:nth-child(1) {
+  left: 15px;
+  top: 50px;
+  width: 323px;
+}
+
+.video_item:nth-child(2) {
+  left: 343px;
+  top: 35px;
+  width: 323px;
+}
+
+.video_item:nth-child(3) {
+  left: 654px;
+  top: 42px;
+  width: 323px;
+}
+
+.video_item:nth-child(4) {
+  left: 950px;
+  top: 51px;
+  width: 300px;
+}
+
+/* 2줄 */
+.video_item:nth-child(5) {
+  left: 15px;
+  top: 315px;
+  width: 323px;
+}
+
+.video_item:nth-child(6) {
+  left: 339px;
+  top: 304px;
+  width: 323px;
+}
+
+.video_item:nth-child(7) {
+  left: 642px;
+  top: 304px;
+  width: 323px;
+}
+
+.video_item:nth-child(8) {
+  left: 950px;
+  top: 309px;
+  width: 300px;
+}
+
+.play_btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+  background: #736f6f83;
+
+  backdrop-filter: blur(5px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease;
+
+  z-index: 3;
+}
+
+/* 삼각형 */
+.play_btn span {
+  margin-left: 5px;
+
+  width: 0;
+  height: 0;
+
+  border-left: 18px solid #fff;
+  border-top: 11px solid transparent;
+  border-bottom: 11px solid transparent;
+}
+
+/* hover */
+.video_item:hover .video_thumb img {
+  transform: scale(1.08);
+}
+
+.video_item:hover .play_btn {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: rgba(255, 255, 255, 0.32);
+}
+
+/* ===================== section6 ===================== */
+#sec6 {
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+  width: 100%;
+  height: 100vh;
+  background: #111;
+  z-index: 130;
+  overflow: hidden;
+}
+
+.sec6_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/sec6_bg.png") no-repeat center / cover;
+  z-index: 1;
+}
+
+.sec6_title {
+  position: absolute;
+  right: 147px;
+  top: 37px;
+  z-index: 20;
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* 카드 전체 묶음 */
+.web_stage {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.web_track {
+  position: absolute;
+  inset: 0;
+
+  transform: rotate(0deg);
+  transform-origin: 50% 120%;
+}
+
+/* 카드 공통 */
+.web_card {
+  position: absolute;
+  width: 250px;
+  height: 320px;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+}
+
+.web_card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  filter: grayscale(100%);
+  transition:
+    filter 0.35s ease,
+    transform 0.35s ease;
+}
+
+.web_card:hover {
+  z-index: 50;
+}
+
+.web_card:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.06);
+}
+
+/* 처음 보이는 7개 — 피그마 배치 */
+.web_card:nth-child(1) {
+  left: 40px;
+  top: 430px;
+  transform: rotate(-24deg);
+}
+
+.web_card:nth-child(2) {
+  left: 245px;
+  top: 275px;
+  transform: rotate(-12deg);
+}
+
+.web_card:nth-child(3) {
+  left: 470px;
+  top: 235px;
+  transform: rotate(-3deg);
+}
+
+.web_card:nth-child(4) {
+  left: 700px;
+  top: 225px;
+  transform: rotate(6deg);
+}
+
+.web_card:nth-child(5) {
+  left: 930px;
+  top: 250px;
+  transform: rotate(14deg);
+}
+
+.web_card:nth-child(6) {
+  left: 1160px;
+  top: 325px;
+  transform: rotate(24deg);
+}
+
+.web_card:nth-child(7) {
+  left: 1380px;
+  top: 450px;
+  transform: rotate(34deg);
+}
+
+/* ===================== section7 ===================== */
+#sec7 {
+  position: fixed;
+  left: 0;
+  bottom: -100vh;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #eee;
+  z-index: 140;
+
+  overflow: hidden;
+}
+
+.sec7_bg {
+  position: absolute;
+  inset: 0;
+  background: url("../img/sec7_BG.png") no-repeat center / cover;
+  z-index: 1;
+}
+
+/* CONTACT */
+.sec7_title {
+  position: absolute;
+  right: 78px;
+  top: 39px;
+
+  z-index: 10;
+
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* 전체 시소 영역 */
+.seesaw_wrap {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+
+  width: 1400px;
+  height: 520px;
+
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* 원 공통 */
+.contact_circle {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 왼쪽 원 */
+.left_circle {
+  left: 160px;
+  top: 30px;
+
+  background: rgba(0, 0, 0, 0.58);
+  color: #fff;
+
+  transform-origin: center center;
+}
+
+.left_circle p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+.thanks_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.thanks_text .eng {
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.thanks_text .kor {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* 오른쪽 원 */
+.right_circle {
+  right: 190px;
+  top: 29px;
+
+  background: rgba(255, 255, 255, 0.72);
+  color: #000;
+
+  transform-origin: center center;
+}
+
+.right_circle ul {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.right_circle li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 17px;
+}
+
+.right_circle li img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.right_circle li p {
+  font-family: "Roboto Serif", serif;
+  font-size: 18px;
+  color: #000;
+}
+
+/* 시소 */
+.seesaw {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+
+  width: 1100px;
+  height: 170px;
+
+  transform: translateX(-50%);
+  transform-origin: center 105px;
+}
+
+/* 직사각형 */
+.seesaw_bar {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: #000;
+  color: #fff;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+}
+
+.seesaw_bar p {
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+}
+
+/* 삼각형 */
+.seesaw_triangle {
+  position: absolute;
+  left: 50%;
+  bottom: 65px;
+
+  width: 0;
+  height: 0;
+
+  transform: translateX(-50%);
+
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 150px solid #000;
+
+  z-index: 2;
+}
+
+/* ===================== header ===================== */
+#mainHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateY(-100%);
+
+  width: 100%;
+  height: 70px;
+
+  background: rgba(255, 255, 255, 0.42);
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+
+  opacity: 0;
+
+  transition:
+    transform 0.45s ease,
+    opacity 0.45s ease;
+}
+
+#mainHeader.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.header_inner {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 150px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 로고 */
+.header_logo img {
+  width: 80px;
+  display: block;
+}
+
+/* nav */
+.header_nav {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.header_nav a {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Pretendard", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111;
+
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.header_nav a:hover {
+  color: #fff;
+}
+
+/* 움직이는 선 원 */
+.nav_circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  transition:
+    left 0.45s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+}

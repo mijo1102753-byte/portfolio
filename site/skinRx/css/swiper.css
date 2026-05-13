@@ -1,0 +1,15 @@
+.rolling_banner1 .swiper-button-next,
+.rolling_banner1 .swiper-button-prev {
+  color: red;
+}
+.product_box .swiper-button-next,
+.product_box .swiper-button-prev {
+  color: green;
+}
+.swiper-pagination-bullet {
+  background: hotpink;
+  opacity: 0.5;
+}
+.swiper-pagination-bullet-active {
+  background: red;
+}

@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web</title>
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/Fivicon.png" />
+
+    <link rel="stylesheet" href="../css/common/font.css" />
+    <link rel="stylesheet" href="../css/common/reset.css" />
+    <link rel="stylesheet" href="web.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header id="subHeader">
+      <div class="sub_header_inner">
+        <h1 class="sub_logo">
+          <a href="../index.html">
+            <img src="img/logo.png" alt="logo" />
+          </a>
+        </h1>
+
+        <nav class="sub_nav">
+          <span class="sub_nav_circle"></span>
+
+          <a href="../index.html?target=sec3" data-target="sec3" data-name="PROFILE">빛</a>
+          <a href="../index.html?target=sec4" data-target="sec4" data-name="ARTWORK">충돌</a>
+          <a href="../index.html?target=sec5" data-target="sec5" data-name="VIDEO">그림자</a>
+          <a href="../index.html?target=sec6" data-target="sec6" data-name="WEB">인식</a>
+          <a href="../index.html?target=sec7" data-target="sec7" data-name="CONTACT">균형</a>
+        </nav>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+      <section id="webSec">
+        <div class="web_inner">
+          <div class="web_container">
+            <div class="web_text">
+              <div class="program">
+                <span>PROGRAM :</span>
+                <div class="program_icons" id="programIcons"></div>
+              </div>
+
+              <h2 id="webTitle">웹사이트 작업물</h2>
+
+              <p id="webDesc">“한국 전통미와 현대적 공간 해석을 결합한 브랜드 반응형 웹사이트입니다.”</p>
+
+              <h3 id="webSubTitle">• SA : YOU.R</h3>
+
+              <div id="webDetail">
+                SA : YOU.R는 사유의 공간이라는 컨셉을 중심으로<br />
+                전통 소재와 현대적 레이아웃을 결합하여 제작한 반응형 웹사이트입니다.<br />
+                브랜드의 세련되고 트랜디한 분위기와 고급스러운 이미지를 전달하도록 구성했습니다.
+              </div>
+            </div>
+
+            <div class="web_mockup">
+              <img id="webImg" src="img/webmockup7.png" alt="웹사이트 목업" />
+
+              <a id="webLink" href="../site/MAIN/index.html" target="_blank" class="site_btn">
+                <img src="img/site_btn.png" alt="" />
+
+                <span>
+                  사이트<br />
+                  바로가기
+                </span>
+              </a>
+            </div>
+
+            <!-- 순서 반대로 변경 -->
+            <ul class="web_circle_menu">
+              <li class="active" data-web="0">SA : YOU.R</li>
+
+              <li data-web="1">SSANGYONG</li>
+
+              <li data-web="2">MOUNTAIN</li>
+
+              <li data-web="3">
+                MOVIE<br />
+                SITE
+              </li>
+
+              <li data-web="4">DELTA</li>
+
+              <li data-web="5">DESSERT</li>
+
+              <li data-web="6">SKINRX</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- copyright -->
+    <footer class="copyright">
+      <p>copyright © 2026 mijokim. All right reserved.</p>
+    </footer>
+
+    <!--  =================================================== -->
+    <!--  ===================== script  ===================== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+
+    <script>
+      // ===================== header circle =====================
+
+      const nav = document.querySelector(".sub_nav");
+
+      const navLinks = document.querySelectorAll(".sub_nav a");
+
+      const navCircle = document.querySelector(".sub_nav_circle");
+
+      function moveSubCircle(link) {
+        const navRect = nav.getBoundingClientRect();
+
+        const linkRect = link.getBoundingClientRect();
+
+        const x = linkRect.left - navRect.left + linkRect.width / 2;
+
+        navCircle.style.left = `${x}px`;
+      }
+
+      window.addEventListener("load", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec6"]');
+
+        moveSubCircle(firstLink);
+      });
+
+      window.addEventListener("resize", () => {
+        const firstLink = document.querySelector('.sub_nav a[data-target="sec6"]');
+
+        moveSubCircle(firstLink);
+      });
+
+      // 메인페이지 특정 섹션으로 이동
+
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+
+          const target = link.dataset.target;
+
+          location.href = `../index.html?target=${target}`;
+        });
+      });
+
+      function renderProgramIcons(icons) {
+        programIcons.innerHTML = icons
+          .map((icon) => {
+            return `<img src="img/${icon}.png" alt="${icon}" class="icon_${icon}" />`;
+          })
+          .join("");
+      }
+      // ===================== web data =====================
+
+      const webData = [
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• SA : YOU.R",
+
+          desc: "“한국 전통미와 현대적 공간 해석을 결합한 브랜드 반응형 웹사이트입니다.”",
+
+          detail: `
+            SA : YOU.R는 사유의 공간이라는 컨셉을 중심으로<br />
+            전통 소재와 현대적 레이아웃을 결합하여 제작한 반응형 웹사이트입니다.<br />
+            브랜드의 세련되고 트랜디한 분위기와 고급스러운 이미지를 전달하도록 구성했습니다.
+          `,
+
+          img: "img/webmockup7.png",
+
+          link: "../site/MAIN/index.html",
+
+          icons: ["vscode", "figma", "html", "css", "js"],
+        },
+
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• SSANGYONG",
+
+          desc: "“쌍용건설사이트의 레퍼런스를 바탕으로 구조와 인터랙션을 구현한 반응형 웹사이트입니다.”",
+
+          detail: `
+            전체적인 분위기와 인터랙션을 활용하여<br />
+            콘텐츠 탐색이 자연스럽게 이루어지도록 구성했습니다.<br />
+            HTML, CSS, JavaScript를 기반으로 반응형까지 직접 구현했습니다.
+          `,
+
+          img: "img/webmockup6.png",
+
+          link: "../site/SSANGYONG/index.html",
+
+          icons: ["vscode", "figma", "html", "css", "js"],
+        },
+
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• MOUNTAIN",
+
+          desc: "“시각적인 디자인을 중심으로 한 비주얼 반응형 웹사이트 작업입니다.”",
+
+          detail: `
+            자연적인 이미지를 활용하여<br />
+            시원하고 넓은 화면 구성을 중심으로 제작했습니다.<br />
+            스크롤 흐름에 따라 콘텐츠가 자연스럽게 보이도록 구성했습니다.
+          `,
+
+          img: "img/webmockup5.png",
+
+          link: "../site/MOUNTAIN/index.html",
+
+          icons: ["vscode", "figma", "html", "css", "js"],
+        },
+
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• MOVIE SITE",
+
+          desc: "“기존 영화 사이트를 참고하여 구성한 영화 소개 반응형 웹사이트입니다.”",
+
+          detail: `
+            기존 영화 사이트의 사용자 흐름과 인터페이스를 참고하여,<br />
+            영화 정보와 예매 콘텐츠를 중심으로 재구성한 반응형 웹사이트입니다.<br />
+            섹션별 정보 구조를 고려하여 제작하였으며,<br />
+            영화 정보 사이트가 화면 전체에 전달되도록 구성했습니다.
+          `,
+
+          img: "img/webmockup4.png",
+
+          link: "../site/MOVIE-SITE/index.html",
+
+          icons: ["vscode", "figma", "html", "css", "js"],
+        },
+
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• DELTA",
+
+          desc: "“기업형 웹사이트의 구조를 분석하고 안정적인 레이아웃으로 재구성한 반응형 작업입니다.”",
+
+          detail: `
+            웹디자인 수업 과정 중 진행한 연습 과제로,<br />
+            기준 사이트의 콘텐츠와 시각 흐름을 참고하여<br />
+            정보 전달이 명확한 웹페이지로 구성하였습니다.<br />
+            HTML, CSS, jQuery를 활용해 직접 구현한 반응형 웹사이트입니다.
+          `,
+
+          img: "img/webmockup2.png",
+
+          link: "../site/DELTA/index.html",
+
+          icons: ["vscode", "figma", "html", "css", "js"],
+        },
+
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• DESSERT",
+
+          desc: "“브랜드의 분위기를 명확하게 전달하는 디저트 리액트 웹사이트 작업입니다.”",
+
+          detail: `
+            웹디자인 수업 과정 중 진행한 연습 과제로,<br />
+            이미지와 타이포그래피 중심이며<br />
+            부드럽고 감성적인 분위기의 레이아웃을 구성하였습니다.<br />
+            사용자에게 브랜드 이미지를 직관적으로 전달하도록 하였고 리액트로 제작했습니다.
+          `,
+
+          img: "img/webmockup3.png",
+
+          link: "https://dessert-react.vercel.app/",
+
+          icons: ["vscode", "figma", "html", "css", "js", "react"],
+        },
+
+        {
+          title: "웹사이트 작업물",
+
+          subTitle: "• SKINRX",
+
+          desc: "“컨셉을 기반으로 정보 구조와 사용자 흐름을 설계하고, 반응형 웹으로 구현한 작업입니다.”",
+
+          detail: `
+            웹디자인 수업 과정 중 진행한 연습 과제로,<br />
+            기존 사이트의 자료를 활용해 레이아웃을 구성하고 직접 코딩으로 구현한 웹사이트입니다.<br />
+            해당 작업은 반응형이 아닌 고정형 레이아웃으로 제작되었습니다.
+          `,
+
+          img: "img/webmockup1.png",
+
+          link: "../site/skinRx/index.html",
+
+          icons: ["vscode", "figma", "html", "css"],
+        },
+      ];
+
+      const webBtns = document.querySelectorAll(".web_circle_menu li");
+
+      const webTitle = document.getElementById("webTitle");
+
+      const webSubTitle = document.getElementById("webSubTitle");
+
+      const webDesc = document.getElementById("webDesc");
+
+      const webDetail = document.getElementById("webDetail");
+
+      const webImg = document.getElementById("webImg");
+
+      const webLink = document.getElementById("webLink");
+      const params = new URLSearchParams(window.location.search);
+
+      const webIndex = params.get("web");
+
+      if (webIndex !== null) {
+        const data = webData[webIndex];
+
+        webTitle.innerText = data.title;
+
+        webSubTitle.innerText = data.subTitle;
+
+        webDesc.innerText = data.desc;
+
+        webDetail.innerHTML = data.detail;
+
+        webImg.src = data.img;
+
+        webLink.href = data.link;
+
+        renderProgramIcons(data.icons);
+
+        webBtns.forEach((item) => item.classList.remove("active"));
+
+        webBtns[webIndex].classList.add("active");
+      }
+
+      webBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const index = btn.dataset.web;
+
+          const data = webData[index];
+
+          webBtns.forEach((item) => item.classList.remove("active"));
+
+          btn.classList.add("active");
+
+          webTitle.innerText = data.title;
+
+          webSubTitle.innerText = data.subTitle;
+
+          webDesc.innerText = data.desc;
+
+          webDetail.innerHTML = data.detail;
+
+          webImg.src = data.img;
+
+          webLink.href = data.link;
+
+          renderProgramIcons(data.icons);
+        });
+      });
+
+      const defaultIndex = webIndex !== null ? Number(webIndex) : 0;
+
+      renderProgramIcons(webData[defaultIndex].icons);
+
+      // ===================== sub page circle cursor =====================
+      const subCursor = document.createElement("div");
+      subCursor.className = "sub_cursor";
+      document.body.appendChild(subCursor);
+
+      let subLastTrailTime = 0;
+
+      document.addEventListener("mousemove", function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+
+        subCursor.style.left = x + "px";
+        subCursor.style.top = y + "px";
+
+        const now = Date.now();
+
+        if (now - subLastTrailTime > 55) {
+          const trail = document.createElement("div");
+          trail.className = "sub_cursor_trail";
+          trail.style.left = x + "px";
+          trail.style.top = y + "px";
+
+          document.body.appendChild(trail);
+
+          setTimeout(() => {
+            trail.remove();
+          }, 1000);
+
+          subLastTrailTime = now;
+        }
+      });
+
+      document.addEventListener("mousedown", function () {
+        subCursor.classList.add("click");
+      });
+
+      document.addEventListener("mouseup", function () {
+        subCursor.classList.remove("click");
+      });
+    </script>
+  </body>
+</html>

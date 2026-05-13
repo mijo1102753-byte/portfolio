@@ -1,0 +1,38 @@
+/* cardType */
+#cardType > p {
+  width: 40%;
+  margin: 0 auto 70px auto;
+  word-break: keep-all;
+}
+.card_inner {
+  display: flex;
+  justify-content: space-between;
+}
+.card {
+  width: 32%;
+}
+.card_header {
+}
+.card_body {
+  padding: 24px;
+  background: #f5f5f5;
+}
+.card_body .tit {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card_body .desc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4;
+  color: #666;
+  margin-bottom: 20px;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 4; /* 제한할 텍스트의 줄 수 */
+}
+.card_body .btn {
+  color: #222;
+}

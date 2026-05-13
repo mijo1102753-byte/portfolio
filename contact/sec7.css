@@ -1,0 +1,374 @@
+/* ===================== section7 ===================== */
+#sec7 {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100vh;
+
+  background: #eee;
+  z-index: 140;
+
+  overflow: hidden;
+}
+
+.sec7_bg {
+  position: absolute;
+  inset: 0;
+  background: url("img/sec7_BG.png") no-repeat center / cover;
+  z-index: 1;
+}
+
+/* CONTACT */
+.sec7_title {
+  position: absolute;
+  right: 78px;
+  top: -16px;
+
+  z-index: 10;
+
+  font-family: "Roboto Serif", serif;
+  font-size: 90px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* 전체 시소 영역 */
+.seesaw_wrap {
+  position: absolute;
+  left: 50%;
+  top: 56%;
+
+  width: 1400px;
+  height: 520px;
+
+  transform: translate(-50%, -50%);
+  z-index: 5;
+}
+
+/* 원 공통 */
+.contact_circle {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Pretendard", sans-serif;
+}
+
+/* 왼쪽 원 */
+.left_circle {
+  left: 160px;
+  top: 30px;
+
+  background: rgba(0, 0, 0, 0.58);
+  color: #fff;
+
+  transform-origin: center center;
+}
+
+.left_circle p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+}
+.thanks_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.thanks_text .eng {
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.thanks_text .kor {
+  font-family: "Pretendard", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* 오른쪽 원 */
+.right_circle {
+  right: 190px;
+  top: 29px;
+
+  background: rgba(255, 255, 255, 0.72);
+  color: #000;
+
+  transform-origin: center center;
+}
+
+.right_circle ul {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.right_circle li {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-size: 17px;
+}
+
+.right_circle li img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+  display: block;
+}
+
+.right_circle li p {
+  font-family: "Roboto Serif", serif;
+  font-size: 18px;
+  color: #000;
+}
+
+/* 시소 */
+.seesaw {
+  position: absolute;
+  left: 50%;
+  bottom: 70px;
+
+  width: 1100px;
+  height: 170px;
+
+  transform: translateX(-50%);
+  transform-origin: center 105px;
+}
+
+/* 직사각형 */
+.seesaw_bar {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 100%;
+  height: 70px;
+
+  background: #000;
+  color: #fff;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 3;
+}
+
+.seesaw_bar p {
+  font-family: "Roboto Serif", serif;
+  font-size: 20px;
+}
+
+/* 삼각형 */
+.seesaw_triangle {
+  position: absolute;
+  left: 50%;
+  bottom: 65px;
+
+  width: 0;
+  height: 0;
+
+  transform: translateX(-50%);
+
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 150px solid #000;
+
+  z-index: 2;
+}
+
+/* ===================== sub header ===================== */
+#subHeader {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  height: 58px;
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+}
+
+.sub_header_inner {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 150px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sub_logo img {
+  width: 58px;
+  display: block;
+}
+
+.sub_nav {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.sub_nav a {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Pretendard", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.sub_nav a::after {
+  content: attr(data-name);
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  color: #000;
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  white-space: nowrap;
+  pointer-events: none;
+
+  transition: opacity 0.25s ease;
+}
+
+.sub_nav a:hover {
+  color: transparent;
+}
+
+.sub_nav a:hover::after {
+  opacity: 1;
+}
+
+.sub_nav a:hover {
+  display: block;
+}
+
+.sub_nav_circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 38px;
+  height: 38px;
+
+  border: 1px solid #00000063;
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* 움직이는 선 원 */
+.nav_circle {
+  position: absolute;
+  left: 0;
+  top: 50%;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+
+  transition:
+    left 0.45s ease,
+    width 0.3s ease,
+    height 0.3s ease;
+}
+
+/* 퍼지는 원 */
+.sub_cursor_trail {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 22px;
+  height: 22px;
+
+  border: 1px solid rgba(0, 0, 0, 0.486);
+
+  border-radius: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2147483646;
+
+  animation: subCursorPulse 1s ease-out forwards;
+}
+
+@keyframes subCursorPulse {
+  0% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(3.8);
+  }
+}
+
+/* 클릭 */
+.sub_cursor.click {
+  width: 34px;
+  height: 34px;
+
+  background: rgba(0, 0, 0, 0.35);
+}
+
+/* ===================== copyright ===================== */
+.copyright {
+  position: absolute;
+  left: 50%;
+  bottom: 61px;
+  transform: translateX(-50%);
+  z-index: 219;
+}
+
+.copyright p {
+  font-family: "Roboto Serif", serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.938);
+
+  letter-spacing: 1px;
+  white-space: nowrap;
+}

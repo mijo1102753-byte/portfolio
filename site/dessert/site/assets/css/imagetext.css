@@ -1,0 +1,75 @@
+/* imgTextType */
+.imgText_inner {
+  display: flex;
+  justify-content: space-between;
+}
+.imgText_inner > div {
+  width: 32%;
+  height: 500px;
+}
+
+.imgText_txt .small {
+  color: #666;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+.imgText_txt .title {
+  font-size: 50px;
+  font-weight: 300;
+  word-break: keep-all;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.imgText_txt .desc {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #666;
+  margin-bottom: 10px;
+}
+.imgText_txt .list {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+.imgText_txt .list li {
+  padding-left: 20px;
+  position: relative;
+}
+.imgText_txt .list li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background: #666;
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+}
+.imgText_txt .list li a:hover {
+  color: #f00165;
+}
+.imgText_img {
+  border-radius: 10px;
+  position: relative;
+}
+.imgText_img.img1 {
+  background: url(../img/macaron.jpg) no-repeat center / cover;
+}
+.imgText_img.img2 {
+  background: url(../img/icecream.png) no-repeat center / cover;
+}
+.imgText_img a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 30px;
+  background-color: #da7c6b;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+.imgText_img a.hotpink {
+  background-color: #c0002e;
+}
